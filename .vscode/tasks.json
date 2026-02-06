@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Serve: Ilmla copy (8080)",
+      "type": "shell",
+      "command": "python3",
+      "args": ["-m", "http.server", "8080", "--bind", "0.0.0.0"],
+      "options": {
+        "cwd": "${workspaceFolder}/Html v2/Ilmla copy"
+      },
+      "problemMatcher": [],
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "windows": {
+        "command": "python",
+        "args": ["-m", "http.server", "8080", "--bind", "0.0.0.0"]
+      }
+    }
+  ]
+}

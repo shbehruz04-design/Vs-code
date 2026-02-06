@@ -8,8 +8,9 @@ html {
 body {
     font-family: sans-serif;
 }
+
 body::-webkit-scrollbar {
- display: none;
+    display: none;
 }
 
 
@@ -42,7 +43,7 @@ header {
     font-size: 26px;
     background-color: transparent;
     border: none;
-    
+
 
     &:hover {
         background-color: gainsboro;
@@ -114,11 +115,11 @@ header {
     border-radius: 5px;
     font-weight: 600;
     margin-bottom: 20px;
-    
+
 
 }
 
-.hero-content >button:hover {
+.hero-content>button:hover {
     background: linear-gradient(135deg, #ffb514, #ffd36a);
 }
 
@@ -255,7 +256,7 @@ header {
         justify-content: space-evenly;
     }
 
-    .hero> img {
+    .hero>img {
         width: auto;
         aspect-ratio: 1/1;
     }
@@ -305,26 +306,31 @@ header {
 
     .why {
         padding: 80px 80px;
-        .h2{
+
+        .h2 {
             font-size: clamp(44px, 4vw, 54px);
             margin-bottom: 60px;
             width: 60%;
         }
 
     }
+
     .divcha {
         flex-direction: row;
-        gap: 80px;        
+        gap: 80px;
     }
+
     .div2 {
         max-width: 1200px;
-        h3{
+
+        h3 {
             font-size: clamp(40px, 4vw, 60px);
             text-align: left;
-    
+
         }
     }
-    .divcha >img{
+
+    .divcha>img {
         width: 600px;
         height: auto;
     }
