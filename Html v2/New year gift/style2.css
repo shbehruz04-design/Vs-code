@@ -1,0 +1,488 @@
+    :root {
+        --base-color: rgba(0, 42, 72, 1);
+        --border: 30px;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+    *,
+    html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: right;
+        width: min-content;
+    }
+
+    .text h1 {
+        font-size: clamp(50px, 6vw, 80px);
+        font-weight: 700;
+        text-wrap: nowrap;
+        color: var(--base-color);
+    }
+
+    .text h2 {
+        font-size: clamp(25px, 5vw, 45px);
+        font-weight: 700;
+        text-wrap: nowrap;
+        color: var(--base-color);
+    }
+
+    .text p {
+        font-size: clamp(15px, 1vw, 20px);
+        font-weight: 500;
+        margin-bottom: 40px;
+        color: var(--base-color);
+    }
+
+    a {
+        color: var(--base-color);
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 2;
+        padding: 12px 0;
+    }
+
+
+
+    header input {
+        height: 2.2rem;
+        width: 15rem;
+        border-radius: 30px;
+        padding-left: 10px;
+        border: none;
+        font-size: 15px;
+
+    }
+
+    .nav {
+        display: flex;
+        gap: 3rem;
+    }
+
+    .btnlar {
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+
+    #button {
+        background-color: var(--base-color);
+        color: #ffffff;
+    }
+
+    .btns {
+        min-width: 160px;
+        min-height: 40px;
+        background-color: #ffffff;
+        color: var(--base-color);
+        border-radius: 50px;
+        border: none;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .btn1 {
+        background-color: transparent;
+        color: #ffffff;
+        font-weight: 600;
+        border: none;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #ffffff;
+        display: flex;
+        gap: 5px;
+    }
+
+    .btn2 {
+        width: 100%;
+        display: none;
+    }
+
+    @keyframes kichray {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        50% {
+            transform: scale(0.9);
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .btns:active {
+        animation: kichray 0.25s ease;
+    }
+
+    .elon {
+        display: flex;
+        justify-content: center;
+        padding: 30px 0;
+    }
+
+    .eloncha {
+        display: flex;
+        align-items: start;
+        width: 80%;
+        padding: 20px 0;
+        justify-content: space-evenly;
+        background: linear-gradient(310deg, rgba(0, 42, 72, 1), rgba(0, 52, 89, 1), rgba(0, 52, 89, 0.9), rgba(252, 238, 213, 1), rgb(217, 180, 116));
+        border-radius: var(--border);
+        text-align: end;
+        padding-right: 5%;
+    }
+
+    .hero-h1 {
+        font-size: calc();
+    }
+
+
+    #elon-img {
+        height: max-content;
+        position: relative;
+        top: 20px
+    }
+
+    .nimadir h3 {
+        font-size: calc(30px, 4vw, 60px);
+        color: var(--base-color);
+    }
+
+    .text h1 {
+        font-size: clamp(35px, 1vw, 65px);
+        font-weight: 700;
+        text-wrap: nowrap;
+        color: var(--base-color);
+    }
+
+    .text h2 {
+        font-size: clamp(25px, 1vw, 45px);
+        font-weight: 700;
+        text-wrap: nowrap;
+        color: var(--base-color);
+    }
+
+    .text p {
+        font-size: clamp(15px, 1vw, 20px);
+        font-weight: 500;
+        margin-bottom: 40px;
+        color: var(--base-color);
+    }
+
+    .text h1,
+    .text h2,
+    .text p {
+        color: #ffffff;
+    }
+
+    .header-icon {
+        font-size: 26px;
+        display: none;
+    }
+
+    .main {
+        display: flex;
+        gap: 30px;
+        margin: 60px auto;
+    }
+
+    .nimadir {
+        width: 250px;
+    }
+
+    .nimadir-group {
+        margin: 20px 0;
+    }
+
+    .nimadir-group label {
+        display: block;
+        margin: 5px 0;
+    }
+
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .card {
+        border: 1px solid rgb(238, 238, 238);
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .card img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .card span {
+        font-weight: 700;
+        color: var(--primary);
+    }
+
+    #footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 70vh;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        width: 100%;
+        background: linear-gradient(rgba(252, 238, 213, 1), rgba(252, 238, 213, 1), rgba(255, 231, 186, 1));
+    }
+
+    #form {
+        display: flex;
+        height: fit-content;
+        width: fit-content;
+        padding: 40px;
+        background-color: var(--base-color);
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        border-radius: 20px;
+    }
+
+    #form p {
+        font-size: 32px;
+        color: white;
+    }
+
+    #foremail {
+        height: fit-content;
+        width: fit-content;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #foremail input {
+        width: 300px;
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+        outline: 2px solid var(--base-color);
+        padding-left: 5px;
+    }
+
+    #foremail button {
+        width: 120px;
+        height: 35px;
+        font-size: 15px;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        background-color: var(--base-color);
+    }
+
+    #contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 30px;
+        gap: 500px;
+    }
+
+    .logos {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .logos i {
+        font-size: 26px;
+        color: var(--base-color);
+    }
+
+    .line {
+        height: 2px;
+        width: 73%;
+        margin: 30px 0;
+        background-color: rgba(102, 102, 189, 0.5);
+    }
+
+    .end {
+        display: flex;
+        gap: 260px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media (max-width: 768px) {
+
+
+        header {
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .nav {
+            display: none;
+        }
+
+        .header-buttons {
+            display: none;
+        }
+
+        .header-icon {
+            display: block;
+        }
+
+        .eloncha {
+            flex-direction: column-reverse;
+            align-items: center;
+            text-align: center;
+            padding-right: 0;
+        }
+
+        #elon-img {
+            width: 85%;
+            top: 20px;
+        }
+
+        .hero-h1 {
+            font-size: 42px;
+        }
+
+        .hero-h2 {
+            font-size: 30px;
+        }
+
+        .hero-p {
+            font-size: 15px;
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: min-content;
+        }
+
+        .text h1 {
+            font-size: calc(30px, 2vw, 65px);
+        }
+
+        .text h1,
+        .text h2,
+        .text p {
+            color: var(--base-color);
+        }
+
+        .btnlar {
+            justify-content: center;
+        }
+
+        .btns {
+            background-color: var(--base-color);
+            color: #ffffff;
+            width: min-content ;
+        }
+
+        .btn1 {
+            background-color: transparent;
+        }
+
+        .main {
+            flex-direction: column;
+            padding: 0 20px;
+        }
+
+        .nimadir {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .nimadir {
+            display: none;
+        }
+
+        .cards {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .eloncha {
+            background: linear-gradient(0deg, rgba(0, 42, 72, 1), rgba(0, 52, 89, 1), rgba(252, 238, 213, 1), rgb(217, 180, 116));
+        }
+        #footer {
+            height: fit-content;
+            padding: 40px 20px;
+        }
+
+        #form {
+            flex-direction: column;
+            text-align: center;
+            width: 90%;
+        }
+
+        #contact {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .end {
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+        }
+
+        #foremail {
+            width: 100%;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        #foremail input {
+            width: 100%;
+            height: 40px;
+            box-sizing: border-box;
+        }
+
+        #foremail button {
+            width: 100%;
+            height: 40px;
+        }
+    }

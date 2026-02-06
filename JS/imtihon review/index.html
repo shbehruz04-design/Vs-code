@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+</style>
+    <style>
+        * {
+            margin: 0 auto;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background-color: hsl(206, 90%, 60%);
+        }
+
+        #header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            height: 22vh;
+            width: 1400px;
+            border-radius: 15px;
+            background-color: hsl(201, 100%, 95%);
+            box-shadow: 0 2px 10px hsl(0, 0%, 47%);
+        }
+
+        #header h1 {
+            font-size: 38px;
+            font-weight: 600;
+            padding-top: 10px;
+            opacity: 0.8;
+        }
+
+        #header h3 {
+            font-weight: 400;
+            padding: 20px;
+        }
+
+        #box1 h2 {
+            margin-left: 230px;
+        }
+        h2{
+            font-size: 32px;
+            opacity: 0.8;
+        }
+
+
+        #box1 {
+            width: 790px;
+            height: 45vh;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 10px;
+            margin-top: 50px;
+            padding: 10px;
+            padding-left: 20px;
+        }
+
+        #box1 span, span {
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .shaxsiy {
+            width: 750px;
+            height: 5vh;
+            background-color: hsl(215, 100%, 95%);
+            margin: 5px;
+            padding: 8px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            text-align: left;
+            border-radius: 10px;
+            box-shadow: -5px 0 3px hsl(215, 100%, 70%);
+            font-weight: 600;
+            padding-left: 20px;
+        }
+
+
+        span {
+            font-weight: normal;
+        }
+
+        .card {
+            margin-top: 30px;
+            width: 760px;
+            height: 45vh;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover,
+        #box1:hover {
+            transform: scale(1.02);
+        }
+
+        .game-item {
+            width: 170px;
+            height: 4vh;
+            background: #ffe6a1;
+            border-left: 5px solid gold;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 5px 0;
+            margin-left: 8px;
+            font-size: 18px;
+            list-style: none;
+        }
+
+        #gameList {
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        input {
+            width: 300px;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+        }
+
+        .btn {
+            width: 230px;
+            height: 6vh;
+            background: linear-gradient(-60deg, #3399ff, hsl(210, 100%, 80%));
+            border: none;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 5px;
+            padding-top: 5px;
+            border-radius: 30px;
+        }
+
+        .btn:hover {
+            background: linear-gradient(60deg, #3399ff, hsl(210, 100%, 80%));
+            transform: translateY(-6px);
+        }
+
+        .btn:active {
+            opacity: 0.7;
+        }
+
+        #add {
+            padding-top: 50px;
+        }
+
+        #input {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding-left: 170px;
+        }
+
+        input:hover {
+            border: 3px solid #3399ff;
+        }
+
+        .cardLast {
+            height: fit-content;
+            justify-content: center;
+        }
+
+        #btnLast {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #tugmalar {
+            padding-top: 30px;
+            gap: 40px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .cardAdd {
+            height: fit-content;
+        }
+
+        body.qizil {
+            background-color: hsla(173, 100%, 30%, 1);
+        }
+    </style>
+</head>
+
+<body>
+    <section id="header">
+        <h1>Mening shaxsiy sahifam</h1>
+        <p>Xush kelibsiz! <span id="welcome"></span> 🌟</p>
+    </section>
+    <section id="box1">
+        <h2 style="padding-bottom: 20px;">🙍🏻 Shaxsiy ma'lumotlar</h2>
+        <p class="shaxsiy">Ism:  <span id="ism">  </span></p>
+        <p class="shaxsiy">Yosh:  <span id="yosh">  </span></p>
+        <p class="shaxsiy">Maktab:  <span id="maktab">  </span></p>
+        <p class="shaxsiy">Sevimli fan:  <span id="fan">  </span></p>
+    </section>
+    <section class="card cardAdd">
+        <h2 style="margin-left: 250px; padding-bottom: 25px;">🎮 Sevimli o'yinlar </h2>
+        <ul id="gameList">
+            <li class="game-item">🎯 Minecraft</li>
+            <li class="game-item">🏃 Roblox</li>
+            <li class="game-item">🎪 Among Us</li>
+            <li class="game-item">⚔️ Fortnite</li>
+
+        </ul>
+        <div id="input">
+            <input style="margin-left: 60px;" type="text" id="game">
+            <button class="btn btn1" onclick="addGame()">Qo'shish</button>
+            <button class="btn" onclick="random()">Tasodifiy o'yin</button>
+        </div>
+    </section>
+    <section class="card cardLast">
+        <h2 style="padding-bottom: 30px;">🎯 Interaktiv tugmalar</h2>
+        <div id="btnLast">
+            <button class="btn" onclick="hi()">Salom berish</button>
+            <button class="btn" onclick="latifa()">Latifa aytish</button>
+            <button class="btn" onclick="orqaFon()">Rang o'zgartirish</button>
+            <button class="btn" onclick="soatKursatish()">Soatni ko'rsatish</button>
+        </div>
+
+    </section>
+    <script>
+        let ism = prompt("Ismingizni kiriting")
+        let yoshValue = prompt("yoshingizni kiriting")
+        let maktab = prompt("Maktabingizni kiriting")
+        let fan = prompt("Faningizni kiriting")
+        document.getElementById("welcome").textContent = ism || "Do'st"
+        document.getElementById("ism").textContent = ism || "Aniqlanmagan"
+        document.getElementById("yosh").textContent = yoshValue || "Aniqlanmagan"
+        document.getElementById("maktab").textContent = maktab || "Aniqlanmagan"
+        document.getElementById("fan").textContent = fan || "Aniqlanmagan"
+        let gameList = document.getElementById("gameList")
+        let game = document.getElementById("game")
+
+        function addGame() {
+
+            let gameValue = game.value;
+            if (gameValue == "") return alert("Avval o'yin nomini kiriting")
+
+            gameList.innerHTML += `<li class="game-item">🎮 ${gameValue}</li>`
+            game.value = ""
+
+        }
+        function hi() {
+            alert("Assalomu aleykum");
+        }
+        function latifa() {
+            alert('JavaScript nima uchun yaxshi? Chunki u har doim fun! 🎉')
+        }
+        let body = document.body;
+        function orqaFon() {
+            alert("Rang o'zgardi🎨")
+            body.classList.toggle('qizil');
+
+        }
+        let sana = new Date();
+        let yil = sana.getFullYear()
+        let oy = sana.getMonth() + 1;
+
+        function soatKursatish() {
+            let sana = new Date();
+            let tuliqSoat = sana.getHours() + ":" + sana.getMinutes() + ":" + sana.getSeconds() + ":"
+            // let soat = sana.getHours()
+            // let minut = sana.getMinutes()
+            // let secund = sana.getSeconds()
+            // alert(soat)
+            // alert(minut)
+            // alert(secund)
+            alert(`Hozirgi vaqt: ${tuliqSoat}`)
+        }
+
+    </script>
+</body>
+
+</html>

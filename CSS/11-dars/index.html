@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display xususiyatlari</title>
+    <style>
+        body {
+            justify-content: center;
+        }
+
+        .box {
+            background-color: lightblue;
+            padding: 10px;
+            margin: 5px;
+            border: 2px solid blue;
+        }
+
+        .inline {
+            display: inline;
+            width: 200px;
+            height: 50px;
+        }
+
+        .block {
+            display: block;
+            width: 200px;
+            height: 50px;
+        }
+
+        .inline-block {
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+        }
+        li{
+            list-style-type:none;
+            display: inline-block;
+        }
+        a{
+            text-decoration: none;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Menu 1</a></li>
+            <li><a href="#">Menu 2</a></li>
+            <li><a href="#">Menu 3</a></li>
+            <li><a href="#">Menu 4</a></li>
+            <li><a href="#">Menu 5</a></li>
+        </ul>
+    </nav>
+    <h2>Display:inline</h2>
+    <span class="box inline">Inline 1</span>
+    <span class="box inline">Inline 2</span>
+    <span class="box inline">Inline 3</span>
+
+    <h2>Display:block</h2>
+    <span class="box block">Block 1</span>
+    <span class="box block">Block 2</span>
+    <span class="box block">Block 3</span>
+
+    <h2>Display:inline-block</h2>
+    <span class="box inline-block">Inline-block 1</span>
+    <span class="box inline-block">Inline-block 2</span>
+    <span class="box inline-block">Inline-block 3</span>
+
+</body>
+
+</html>

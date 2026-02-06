@@ -1,0 +1,156 @@
+body {
+    padding-left: 30%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: rgba(28, 28, 28, 1);
+    font-family: "Inter", sans-serif;
+    flex-wrap: wrap;
+}
+
+.header {
+    width: 550px;
+    height: 208px;
+    background-image: url("image 36.png");
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+}
+
+.header h1 {
+    font-weight: 800;
+    font-size: 42px;
+    color: rgba(255, 255, 255, 1);
+    animation-name: skew;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes skew {
+    0% {}
+
+    50% {
+        scale: 1.09;
+        transform: skew(0);
+    }
+
+    100% {
+        transform: skew(1rem);
+    }
+}
+
+.header h4 {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+input {
+    width: 360px;
+    height: 38px;
+    margin: 0;
+    border: none;
+    border-radius: 6px 0 0 6px;
+    background-color: rgba(46, 46, 47, 1);
+    padding-left: 20px;
+    color: #fff;
+}
+
+button {
+    width: 110px;
+    height: 38px;
+    margin: 0;
+    border: none;
+    color: rgba(165, 165, 165, 1);
+    background-color: rgba(75, 75, 75, 1);
+    border-radius: 0 6px 6px 0px;
+}
+
+button:active {
+    background-color: rgba(165, 165, 165, 1);
+    color: black;
+}
+
+.list:active {
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.search {
+    position: absolute;
+    left: 39px;
+    top: -20px;
+}
+
+.search:hover {
+    scale: 1.05;
+}
+
+.main {
+    width: 550px;
+    position: relative;
+    padding-top: 50px;
+    background-color: rgba(18, 18, 18, 1);
+    ;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    gap: 50px;
+    padding: 0 35px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.line {
+    width: 491px;
+    height: 2.5px;
+    margin-left: 35px;
+    background-color: rgba(44, 44, 44, 1);
+}
+
+.text h1 {
+    font-size: 18px;
+    margin: 0 8px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.button {
+    margin: 0;
+}
+
+.text h6,
+span {
+    font-size: 12px;
+    margin: 8px;
+    gap: 10px;
+    color: rgba(255, 255, 255, 1);
+    align-items: center;
+}
+
+.text p {
+    width: 350px;
+    font-size: 14px;
+    color: rgba(165, 165, 165, 1);
+    padding-left: 5px;
+}
+
+.film-img {
+    width: 100px;
+    height: 148px;
+}
+
+.box-last {
+    padding-bottom: 40px;
+}

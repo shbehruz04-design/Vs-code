@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://fonts.cdnfonts.com/css/911-porscha" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #headerHero {
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 150px;
+        }
+
+        #video {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+        }
+
+
+
+
+        #hero-text {
+            font-size: 6rem;
+            color: white;
+            margin-bottom: 20px;
+            max-width: 400px;
+        }
+
+        .heroMain {
+            height: 80vh;
+            margin-left: -50%;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        h2,
+        p,
+        .menu,
+        a {
+            text-shadow: 2px 2px 4px rgba(8, 8, 8, 0.96);
+            font-weight: 350;
+
+        }
+
+        a {
+            cursor: pointer;
+            font-size: 2rem;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-weight: 300;
+            font-family: '911 Porscha', sans-serif;
+            text-shadow: 2px 2px 4px rgba(7, 7, 7, 0.971);
+        }
+
+        #logo {
+            cursor: pointer;
+            font-size: 2rem;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-weight: 300;
+            font-family: '911 Porscha', sans-serif;
+            text-shadow: 2px 2px 4px rgba(7, 7, 7, 0.971);
+        }
+
+        .card {
+            width: 350px;
+            height: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+
+
+        .card-img {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("https://a.storyblok.com/f/338913/2048x1536/900347f748/kw38-992-ii-top-s.jpg/m/900x675/filters:format(webp):quality(80)");
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            border: none;
+        }
+
+        .card-img2 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("https://a.storyblok.com/f/338913/3840x2880/a5a868ecc0/kw32-pcgb-taycan-campaign.jpg/m/900x675/filters:format(webp):quality(80)");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-img3 {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url("https://a.storyblok.com/f/338913/9712x5467/2478eea348/992-ii-gt3-fa90-fallback-desktop.jpg/m/900x675/filters:format(webp):quality(80)");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-text {
+            margin-top: 210px;
+            color: white;
+        }
+
+        .card button:hover {
+            background-color: gray;
+        }
+
+        .cards {
+            margin-bottom: 150px;
+        }
+
+        .cardlar {
+            margin-bottom: 50px;
+        }
+
+        .card-img:hover {
+            transform: scaleX(1.05);
+
+        }
+
+        .background {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            z-index: -1;
+        }
+
+        #h2 {
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 42px;
+        }
+
+        @keyframes black1 {
+            0% {
+                background-color: rgba(0, 0, 0, 0);
+            }
+
+            20% {
+                background-color: rgba(0, 0, 0, 0.2);
+            }
+
+
+            50% {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            70% {
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+
+
+            100% {
+                background-color: rgba(0, 0, 0, 1);
+            }
+
+        }
+        
+        
+
+        #all.scrolled {
+            animation: black1 0.5s ease;
+            animation-fill-mode: forwards;
+        }
+
+        .sc {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section id="all">
+
+
+        <div id="headerHero">
+            <div class="background"></div>
+            <video autoplay loop muted id="video">
+                <source src="video_2025-12-29_08-04-23.mp4">
+            </video>
+            <header>
+                <nav class="navbar d-flex align-items-center ">
+                    <div class="container ">
+                        <div class="d-flex align-items-center justify-content-center gap-2">
+
+                            <a href="#"><i class="bi bi-list bg-transparent h4 text-light menu"></i></a>
+
+                            <p class="h5 text-light menu">Menu</p>
+                        </div>
+
+                        <a id="logo" href="#">Porsche</a>
+
+                        <a href="/"><i class="bi bi-person h4 text-light"></i></a>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="heroMain d-flex flex-column justify-content-center align-items-center text-center">
+                <h2 id="hero-text">The new Porsche 992 GT3</h2>
+                <button class="btn btn-lg btn-outline-light">Discover More</button>
+            </div>
+            <div>
+                <footer>
+                    <div class="">
+                        <div class="d-flex justify-content-center align-items-center text-center h-100 mb-4">
+                            <p class="text-light">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
+                                provident
+                                adipisci impedit perspiciatis minus voluptas molestias placeat quo laborum voluptatum?
+                            </p>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+        <div class="d-flex flex-column justify-content-center  cards">
+            <div class="d-flex justify-content-center gap-5 cardlar">
+                <div class="card card-img">
+                    <div class="d-flex justify-content-between mx-4 align-items-center card-text">
+                        <h3 class="h5">911 Turbo S.</h3>
+                        <button class="btn"><i class="bi bi-arrow-right text-light"></i></button>
+                    </div>
+                </div>
+                <div class="card card-img card-img2">
+                    <div class="d-flex justify-content-between mx-4 align-items-center card-text">
+                        <h3 class="h5">911 Turbo S.</h3>
+                        <button class="btn"><i class="bi bi-arrow-right text-light"></i></button>
+                    </div>
+                </div>
+                <div class="card card-img card-img3">
+                    <div class="d-flex justify-content-between mx-4 align-items-center card-text">
+                        <h3 class="h5">911 Turbo S.</h3>
+                        <button class="btn"><i class="bi bi-arrow-right text-light"></i></button>
+                    </div>
+                </div>
+
+            </div>
+            <footer class="d-flex text-start" style="width: 72%; margin-left: 16.5%;">
+                <span>911 Turbo S: Fuel consumption combined (model range): 11.7 – 11.5 l/100 km, CO₂-emissions combined
+                    (model range): 266 – 262 g/km | Taycan: Electric energy consumption combined (model range): 19.4 –
+                    16.7 kWh/100 km, CO₂-emissions combined (model range): 0 g/km</span>
+            </footer>
+
+        </div>
+        <h2 id="h2">Your Porsche journey starts now.</h2>
+        <section class="sc"></section>
+        <section class="sc"></section>
+        <section class="sc"></section>
+    </section>
+
+    <script>
+        const main = document.getElementById('all');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 120 && window.scrollY < 1500) {
+                main.classList.add('scrolled')
+            } else {
+                main.classList.remove('scrolled');
+            }
+        })
+    </script>
+</body>
+
+</html>

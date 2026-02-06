@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">Flexbox Akademiya</div>
+
+        <nav class="nav">
+            <a href="">Bosh sahifa</a>
+            <a href="#main">Kurslar</a>
+            <a href="#pricing">Narxlar</a>
+            <a href="#galereya">Galereya</a>
+            <a href="#jamoa">Jamoa</a>
+        </nav>
+
+        <div class="nav-last">
+            <button class="btn last-btn btn1">Savol-javob</button>
+            <button class="btn last-btn">Bog'lanish</button>
+        </div>
+    </header>
+
+    <section class="hero" id="hero1">
+        <div class="hero-left">
+            <h1>Flexbox'ni amalda o'rganish uchun demo sayt</h1>
+            <p>
+                Har bir bolim Flexbox'ning turli imkoniyatlarini ko'rsatadi:
+                `wrap`, `order`,`flex-grow`
+                ,`align-self`, nested flex va responsive dizayn.
+            </p>
+
+            <div class="flex-bolimi">
+                <button class="btn primary">Kurslarni ko'rish</button>
+                <button class="btn">Narxlarni solishtirish</button>
+                <span class="btn2 chiziqcha" disabled> 1 ta sahifa, ko'p misol </span>
+            </div>
+
+            <div class="stats">
+                <div class="stat stat-1">
+                    <strong>8+</strong>
+                    <span>Flex bo'lim</span>
+                </div>
+                <div class="stat stat-2">
+                    <strong>3</strong>
+                    <span>Breakpoints</span>
+                </div>
+                <div class="stat stat-3">
+                    <strong>100%</strong>
+                    <span>Amaliy</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="card">
+                <div class="tab">
+                    <span class="active">Nested Flex</span>
+                    <span>justify-content</span>
+                    <span>align-items</span>
+                </div>
+
+                <div class="list">
+                    <div class="item">
+                        <div class="icon">A</div>
+                        <div>
+                            <h4>Tezkor tuzilma</h4>
+                            <p>Ikki ustun, keyin stack</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="icon">B</div>
+                        <div>
+                            <h4>Oson moslashish</h4>
+                            <p>flex-basis va gap</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="icon">C</div>
+                        <div>
+                            <h4>Tartiblash</h4>
+                            <p>order bilan demo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ranges">
+                    <span>Bugun</span>
+                    <div class="bar">
+                        <div class="range"></div>
+                    </div>
+                    <span>72%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hero2" id="main">
+        <h2>Bo'lim 1: Flex-wrap va kartalar</h2>
+        <p>Kartalar konteynerga sig'masa keyingi qatorga o'tadi. `gap` ishlatilgan.</p>
+
+        <div class="wrapper-sec">
+            <div class="cards card0">
+                <span class="cs1">Order</span>
+                <h3>Tartibni o'zgartirish</h3>
+                <p>Bir karta kattaroq va `order` bilan birinchi chiqadi.</p>
+                <div class="cbtn">
+                    <button class="primary">Ko'rish</button>
+                    <span class="cs2">Misol</span>
+                </div>
+            </div>
+            <div class="cards card1">
+                <span class="cs1">Start</span>
+                <h3>Asosiy tushunchalar</h3>
+                <p>`display:flex`, `flex-direction`, `gap` va oddiy alignment.</p>
+                <div class="cbtn">
+                    <button class="primary">Ko'rish</button>
+                    <span class="cs2">Misol</span>
+                </div>
+            </div>
+            <div class="cards card2">
+                <span class="cs1">Layout</span>
+                <h3>Wrap + basis</h3>
+                <p>`flex: 1 1 260px` orqali responsiv kartalar.</p>
+                <div class="cbtn">
+                    <button class="primary">Ko'rish</button>
+                    <span class="cs2">Misol</span>
+                </div>
+            </div>
+            <div class="cards card3">
+                <span class="cs1">Alignment</span>
+                <h3>Align-self</h3>
+                <p>Ichidagi tugmalar turlicha joylashadi.</p>
+                <div class="cbtn">
+                    <button class="primary">Ko'rish</button>
+                    <span class="cs2">Misol</span>
+                </div>
+            </div>
+            <div class="cards card4">
+                <span class="cs1">Real</span>
+                <h3>Amaliy UI</h3>
+                <p>Header, pricing, galereya va footer — hammasi flex.</p>
+                <div class="cbtn">
+                    <button class="primary">Ko'rish</button>
+                    <span class="cs2">Misol</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hero2" id="pricing">
+        <h2>Bo'lim 2: Pricing (equal height + grow)</h2>
+        <p>Kartalar bir xil balandlikda turadi, ichki qism esa `margin-top:auto` bilan pastga itarilad</p>
+        <div class="wrapper-thr">
+            <div class="cards2">
+                <div class="cbtn2">
+                    <span class="cs3">Boshlang'ich</span>
+                    <span class="cs3">0 so'm</span>
+                </div>
+                <ul>
+                    <li>1 ta demo sahifa</li>
+                    <li>Flex asoslari</li>
+                    <li>Uyga vazifa</li>
+                </ul>
+                <button class="primary primary-last">Ko'rish</button>
+            </div>
+            <div class="cards2">
+                <div class="cbtn2">
+                    <span class="cs3">Standart</span>
+                    <span class="cs3">49 000 so'm</span>
+                </div>
+                <ul>
+                    <li>3 ta layout mashq</li>
+                    <li>`order`, `wrap`, `basis`</li>
+                    <li>Mentor feedback</li>
+                    <li>Mini test</li>
+                </ul>
+                <button class="primary primary-last">Tanlash</button>
+            </div>
+            <div class="cards2">
+                <div class="cbtn2">
+                    <span class="cs3">Pro</span>
+                    <span class="cs3">99 000 so'm</span>
+                </div>
+                <ul>
+                    <li>6 ta section clone</li>
+                    <li>Responsive nazorat</li>
+                    <li>Portfolio tayyor</li>
+                </ul>
+                <button class="primary primary-last">Batafsil</button>
+            </div>
+        </div>
+    </section>
+    <section class="hero2 hero5" id="galereya">
+        <h2>Bo'lim 3: Galereya (wrap + basis + order)</h2>
+        <p>Elementlar `flex-basis` bilan turlicha kenglik oladi. Ba'zilari `order` bilan oldinga chiqadi.</p>
+        <div class="wrapper-four">
+            <div class="cards4 card5">
+                <span class="cs1">Order tile</span>
+                <p>`order: -1`</p>
+            </div>
+            <div class="cards4 card6">
+                <span class="cs1">Katta tile</span>
+                <p>`flex: 2 1 360px`</p>
+
+            </div>
+            <div class="cards4 card7">
+                <span class="cs1">Tile</span>
+                <p>oddiy</p>
+            </div>
+            <div class="cards4 card8">
+                <span class="cs1">Title</span>
+                <p>oddiy</p>
+            </div>
+            <div class="cards4 card9">
+                <span class="cs1">Baland tile</span>
+                <p>`align-self: stretch`</p>
+            </div>
+            <div class="cards4 card10">
+                <span class="cs1">Title</span>
+                <p>oddiy</p>
+            </div>
+        </div>
+    </section>
+    <section class="hero hero6" id="jamoa">
+        <h2>Bo'lim 4: Jamoa (auto margin + align-items)</h2>
+        <p>Kartada tugma `margin-left:auto` orqali o'ng tomonga suriladi.</p>
+
+        <div class="itemL">
+            <div class="iconL">M</div>
+            <div>
+                <h4>Madina</h4>
+                <p>Frontend mentor</p>
+            </div>
+            <button class="primary profile">Profile</button>
+        </div>
+        <div class=" itemL">
+            <div class="iconL">A</div>
+            <div>
+                <h4>Aziz</h4>
+                <p>UI/UX</p>
+            </div>
+            <button class="primary profile">Profile</button>
+        </div>
+        <div class="itemL">
+            <div class="iconL">S</div>
+            <div>
+                <h4>Sardor</h4>
+                <p>Layout specialist</p>
+            </div>
+            <button class="primary profile">Profile</button>
+        </div>
+    </section>
+    <section class=" hero7">
+        <h2>Bo'lim 5: FAQ (two-column flex + align-self)</h2>
+        <p>Chapda savollar, o'ngda "eslatma" paneli. Kichik ekranda ustunlar stack bo'ladi.</p>
+        <div class="cardss-wrapper">
+            <div class=" cardss">
+                <h3>Flexbox qachon ishlatiladi?</h3>
+                <p>Bir o'lchamli (row/column) layoutlar: nav, kartalar, pricing, list va h.k.</p>
+            </div>
+            <div class="cardss">
+
+                <h3>`justify-content` va `align-items` farqi?</h3>
+                <p>`justify-content` — asosiy o'q bo'yicha, `align-items` — kesishuvchi o'q bo'yicha tekislaydi.</p>
+
+            </div>
+            <div class="cardss">
+
+                <h3>`flex: 1 1 260px` nimani bildiradi?</h3>
+                <p>Grow=1, shrink=1, basis=260px: element o'sadi/kichrayadi, boshlang'ich kenglik 260px.</p>
+
+            </div>
+
+            <div class="cardss cardssL">
+                <h3>Mashq</h3>
+                <p>Talabalar uchun vazifa: har bir section'ni alohida clone qilib, sinf nomlarini saqlagan holda
+                    responsiv qilish.</p>
+                <div class="cbtn cbtn5">
+                    <button class="primary">Topshirish</button>
+                    <button class="primary">Yuqoriga</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hero-contact">
+    <h2>Bo'lim 6: Kontakt (form layout)</h2>
+    <p>Inputlar `flex` bilan yonma-yon, keyin kichik ekranda pastma-past bo'ladi.</p>
+
+    <div class="contact-wrapper">
+        <form class="contact-form">
+            <div class="form-row">
+                <div class="input-group">
+                    <label for="name">Ism</label>
+                    <input type="text" id="name" placeholder="Ismingiz">
+                </div>
+                <div class="input-group">
+                    <label for="phone">Telefon</label>
+                    <input type="tel" id="phone" placeholder="+998 ..">
+                </div>
+            </div>
+            <div class="input-group  mavzu">
+                <label for="subject">Mavzu</label>
+                <input type="text" id="subject" placeholder="Masalan: Flexbox homework">
+            </div>
+            <div class="input-group  xabar">
+                <label for="message">Xabar</label>
+                <textarea id="message" placeholder="Savolingiz yoki xabaringiz..."></textarea>
+            </div>
+            <div class="form-buttons">
+                <button type="submit" class="primary">Yuborish</button>
+                <button type="reset" class="btn">Tozalash</button>
+            </div>
+        </form>
+
+        <div class="contact-info">
+            <h3>Aloqa</h3>
+            <p><strong>Email:</strong> hello@flexbox.uz</p>
+            <p><strong>Manzil:</strong> Toshkent, O'zbekiston</p>
+            <p><strong>Darslar:</strong> Dushanba-Shanba</p>
+            <div class="contact-buttons">
+                <button class="btn">Planlar</button>
+                <button class="btn">Ishlar</button>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer-wrapper">
+
+        <div class="footer-col">
+            <h3>Flexbox Akademiya</h3>
+            <p>Demo sahifa: talabalar uchun clone mashqi.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Bo'limlar</h4>
+            <a href="#main">Kurslar</a>
+            <a href="#pricing">Narxlar</a>
+            <a href="#galereya">Galereya</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>Resurslar</h4>
+            <a href="#">FAQ</a>
+            <a href="#">Kontakt</a>
+            <a href="#hero1">Yuqoriga</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2026</span>
+        <span>Flexbox demo layout</span>
+    </div>
+</footer>
+
+</body>
+
+</html>

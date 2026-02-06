@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="box">
+            <p id="javob"><span>Achko</span> 0</p>
+            <h1 id="savol"></h1>
+            <input type="number" id="input" placeholder="Enter your answer">
+            <br>
+            <button id="btn">Submit</button>
+            <audio id="audio" src="banshee-screaming-sound-effect-312864.mp3"></audio>
+        </section>
+        <img id="img" src="data:image/jpeg;base64,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" alt="">
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .tugma {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .qizil{
+            background-color: red;
+            color: white;
+        }
+        .yashil{
+            background-color: green;
+            color: white;
+        }
+        .kuk{
+            background-color: blue;
+            color: white;
+        }
+        .sariq{
+            background-color: yellow;
+            color:black;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="sarlavha">Matn O'zgartirish Dasturi</h1>
+    <p id="matn">Bu matn o'zgaradi</p>
+
+
+    <div>
+        <button onclick="matnniOzgartir()" class="tugma">Matinni o'zgartir</button>
+        <button onclick="rangniQizil()" class="tugma">Qizil rang</button>
+        <button onclick="rangniYashil()" class="tugma">Yashil rang</button>
+        <button onclick="rangniKuk()" class="tugma">Ko'k rang</button>
+        <button onclick="kattalikniOzgartir()" class="tugma">Kattalikni o'zgartir</button>
+        <button onclick="aslHolatgaQaytar()" class="tugma">Aslholatga qaytar</button>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>

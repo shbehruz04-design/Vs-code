@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #1a6fb0;
+            background: linear-gradient(360deg, rgba(26, 111, 176, 1) 0%, rgba(87, 199, 186, 1) 73%);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: white;
+            width: 430px;
+            height: fit-content;
+            height: 500px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px transparent black;
+        }
+
+        h1 {
+            position: absolute;
+            top: 20%;
+            left: 38.6%;
+        }
+
+        input {
+            width: 20vw;
+            height: 5vh;
+            font-size: 18px;
+        }
+
+        #add {
+            width: 3vw;
+            height: 5.4vh;
+            font-size: 34px;
+            position: relative;
+            top: 5px;
+            background-color: hsla(300, 60%, 40%, 1);
+            border-radius: 3px;
+            color: white;
+            border: none;
+        }
+
+        #kiritish {
+            position: absolute;
+            top: 27%;
+            right: 38%;
+            align-items: center;
+        }
+
+        .item {
+            margin-left: 30px;
+            width: 370px;
+            height: 5vh;
+            background-color: gray;
+            border: none;
+            list-style: none;
+            margin-bottom: 10px;
+        }
+
+        .tugma {
+            position: absolute;
+            background-color: red;
+            border: none;
+            right: 579px;
+            width: 3vw;
+            height: 5vh;
+            margin-left: 30px;
+        }
+
+        #list {
+            height: fit-content;
+        }
+
+        #last {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            bottom: 140px;
+            right: 650px;
+            gap: 50px;
+        }
+        #lastBtn{
+            width: 100px;
+            height: 4vh;
+            background-color: hsla(300, 60%, 40%, 1); 
+            color: white;
+            border-radius: 4px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Todo App</h1>
+        <div id="kiritish">
+            <input type="text" id="input" placeholder="  Add your new todo">
+            <button id="add">+</button>
+        </div>
+
+        <div id="list">
+
+        </div>
+        <div id="last">
+            <p id="p"> </p>
+            <button id="lastBtn" onclick="removeAll()">Clear All</button>
+        </div>
+
+    </section>
+    <script>
+        let input = document.getElementById('input');
+        const btn = document.getElementById('add')
+        let ulList = document.getElementById('list');
+        const tugma = document.createElement('button')
+        const lastBtn = document.getElementById("lastBtn")
+        let p = document.getElementById("p")
+
+
+
+        btn.addEventListener('click', function () {
+            let narsaNomi = input.value;
+
+            if (narsaNomi === '') {
+                alert("Oldin Kerakli narsa nomini kiriting!");
+                return;
+            }
+
+            let liy = document.createElement('li');
+            liy.textContent = narsaNomi;
+            liy.className = 'item';
+            liy.onclick = function () {
+                liy.remove()
+            }
+            ulList.appendChild(liy);
+           
+
+            input.value = ''
+            const tugma = document.createElement('button')
+            tugma.className = "tugma"
+            tugma.textContent = "🗑️";
+            liy.appendChild(tugma)
+            p.textContent = `You  panding tasks`
+        })
+        function removeAll() {
+            ulList.innerHTML = ''
+        }
+        // lastBtn.addEventListener('click', function () {
+        //     lastBtn.onclick = function () {
+        //         ulList.remove()
+        //         return
+        //     }
+        // })
+
+
+
+    </script>
+</body>
+
+</html>

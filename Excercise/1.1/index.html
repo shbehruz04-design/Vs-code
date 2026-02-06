@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(#5ee7df, #b490ca);
+        }
+
+        .wrapper{
+            width: 380px;
+            background: #fff;
+            padding: 25px 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .wrapper h2{
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .input-field{
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .input-field input{
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px 0 0 6px;
+            outline: none;
+        }
+
+        .input-field button{
+            width: 50px;
+            background: #7a35ff;
+            border: none;
+            color: #fff;
+            font-size: 26px;
+            cursor: pointer;
+            border-radius: 0 6px 6px 0;
+        }
+
+        ul li{
+            list-style: none;
+            background: #f2f2f2;
+            padding: 12px 14px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        ul li button{
+            background: #ff4b4b;
+            color: #fff;
+            border: none;
+            padding: 8px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .footer button{
+            background: #7a35ff;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <h2>Todo App</h2>
+
+        <div class="input-field">
+            <input type="text" id="todoInput" placeholder="Add your new todo">
+            <button id="addBtn">+</button>
+        </div>
+
+        <ul id="todoList"></ul>
+
+        <div class="footer">
+            <span id="pendingCount">You have 0 pending tasks</span>
+            <button id="clearAll">Clear All</button>
+        </div>
+
+    </div>
+
+
+    <script>
+        let input = document.getElementById("todoInput");
+        let addBtn = document.getElementById("addBtn");
+        let list = document.getElementById("todoList");
+        let pending = document.getElementById("pendingCount");
+        let clearAll = document.getElementById("clearAll");
+
+        let todos = [];
+
+        function render() {
+            list.innerHTML = "";
+            todos.forEach((todo, index) => {
+                let li = document.createElement("li");
+                li.innerHTML = `
+                    ${todo}
+                    <button onclick="deleteTodo(${index})">🗑️</button>
+                `;
+                list.appendChild(li);
+            });
+
+            pending.textContent = `You have ${todos.length} pending tasks`;
+        }
+
+        addBtn.onclick = () => {
+            if (input.value.trim() !== "") {
+                todos.push(input.value.trim());
+                input.value = "";
+                render();
+            }
+        };
+
+        function deleteTodo(index) {
+            todos.splice(index, 1);
+            render();
+        }
+
+        clearAll.onclick = () => {
+            todos = [];
+            render();
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,899 @@
+/* ============================================
+   Modern Admin Panel Styles - Optimized
+   ============================================ */
+
+:root {
+    /* Color Palette */
+    --admin-bg: #0a0e27;
+    --admin-bg-secondary: #0d1129;
+    --admin-card: #1a1f3a;
+    --admin-card-hover: #20254a;
+    --admin-border: rgba(0, 208, 255, 0.15);
+    --admin-border-focus: rgba(0, 208, 255, 0.4);
+    --admin-accent: #00D0FF;
+    --admin-accent-secondary: #093FB4;
+    --admin-text: #ffffff;
+    --admin-text-muted: rgba(255, 255, 255, 0.65);
+    --admin-success: #10b981;
+    --admin-error: #ef4444;
+    --admin-warning: #f59e0b;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 20px rgba(0, 208, 255, 0.15);
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: var(--admin-bg);
+    color: var(--admin-text);
+    min-height: 100vh;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ============================================
+   Custom Scrollbar
+   ============================================ */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--admin-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--admin-accent), var(--admin-accent-secondary));
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--admin-accent);
+}
+
+/* ============================================
+   Login Screen
+   ============================================ */
+.login-screen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--admin-bg) 0%, #1a1f3a 50%, var(--admin-bg) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.login-screen::before,
+.login-screen::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.login-screen::before {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 208, 255, 0.12) 0%, transparent 70%);
+    top: -300px;
+    right: -300px;
+    animation: float 8s ease-in-out infinite;
+}
+
+.login-screen::after {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(9, 63, 180, 0.1) 0%, transparent 70%);
+    bottom: -200px;
+    left: -200px;
+    animation: float 6s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(30px, -30px) scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.login-container {
+    background: rgba(26, 31, 58, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--admin-border);
+    border-radius: 24px;
+    padding: var(--spacing-xl);
+    width: 100%;
+    max-width: 480px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    z-index: 1;
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.admin-logo {
+    margin-bottom: var(--spacing-md);
+    animation: fadeIn 0.6s ease-out 0.2s both;
+}
+
+.admin-logo img {
+    height: 80px;
+    width: auto;
+    max-width: 280px;
+    filter: drop-shadow(0 4px 12px rgba(0, 208, 255, 0.3));
+    transition: transform var(--transition-base);
+}
+
+.admin-logo img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.login-header h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+    background: linear-gradient(135deg, var(--admin-accent) 0%, var(--admin-accent-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+}
+
+.login-header p {
+    color: var(--admin-text-muted);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.login-form {
+    margin-top: var(--spacing-lg);
+}
+
+/* ============================================
+   Form Elements
+   ============================================ */
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    color: var(--admin-text);
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.01em;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 14px 18px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid var(--admin-border);
+    border-radius: 12px;
+    color: var(--admin-text);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all var(--transition-base);
+    outline: none;
+}
+
+.form-group input:hover,
+.form-group textarea:hover,
+.form-group select:hover {
+    border-color: var(--admin-border-focus);
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--admin-accent);
+    box-shadow: 0 0 0 4px rgba(0, 208, 255, 0.12);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+.btn {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    font-family: inherit;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.02em;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--admin-accent) 0%, var(--admin-accent-secondary) 100%);
+    color: var(--admin-text);
+    box-shadow: 0 4px 16px rgba(0, 208, 255, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 208, 255, 0.5);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--admin-accent);
+    border: 2px solid var(--admin-accent);
+}
+
+.btn-secondary:hover {
+    background: rgba(0, 208, 255, 0.1);
+    border-color: var(--admin-accent);
+    box-shadow: 0 0 16px rgba(0, 208, 255, 0.2);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, var(--admin-success), #059669);
+    color: white;
+}
+
+.btn-danger {
+    background: rgba(239, 68, 68, 0.15);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    color: var(--admin-error);
+}
+
+.btn-danger:hover {
+    background: rgba(239, 68, 68, 0.25);
+    border-color: var(--admin-error);
+}
+
+/* Small button variant */
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+}
+
+/* ============================================
+   Messages & Alerts
+   ============================================ */
+.error-message,
+.success-message,
+.info-message {
+    margin-top: var(--spacing-sm);
+    padding: 14px 18px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    display: none;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.error-message {
+    background: rgba(239, 68, 68, 0.12);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #fca5a5;
+}
+
+.success-message {
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #6ee7b7;
+}
+
+.info-message {
+    background: rgba(0, 208, 255, 0.12);
+    border: 1px solid rgba(0, 208, 255, 0.3);
+    color: var(--admin-accent);
+}
+
+.error-message.show,
+.success-message.show,
+.info-message.show {
+    display: block;
+}
+
+.login-footer {
+    margin-top: var(--spacing-lg);
+    text-align: center;
+}
+
+.login-footer a {
+    color: var(--admin-accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all var(--transition-base);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.login-footer a:hover {
+    color: var(--admin-text);
+    text-decoration: underline;
+}
+
+/* ============================================
+   Dashboard
+   ============================================ */
+.dashboard {
+    min-height: 100vh;
+}
+
+.admin-header {
+    background: rgba(26, 31, 58, 0.98);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--admin-border);
+    padding: var(--spacing-sm) 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-md);
+}
+
+.admin-header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.admin-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.header-logo {
+    height: 50px;
+    width: auto;
+    max-width: 220px;
+    filter: drop-shadow(0 2px 8px rgba(0, 208, 255, 0.3));
+    transition: transform var(--transition-base);
+}
+
+.header-logo:hover {
+    transform: scale(1.05);
+}
+
+.admin-brand span {
+    font-size: 1.25rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, var(--admin-accent), var(--admin-accent-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.admin-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.admin-actions .btn {
+    width: auto;
+    padding: 12px 24px;
+    white-space: nowrap;
+}
+
+.admin-main {
+    padding: var(--spacing-lg) 0 var(--spacing-xl);
+}
+
+.admin-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+/* ============================================
+   Admin Sections
+   ============================================ */
+.admin-section {
+    margin-bottom: var(--spacing-xl);
+    animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+    background: linear-gradient(135deg, var(--admin-accent), var(--admin-text));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.editor-card {
+    background: var(--admin-card);
+    border: 1px solid var(--admin-border);
+    border-radius: 20px;
+    padding: var(--spacing-lg);
+    transition: all var(--transition-base);
+}
+
+.editor-card:hover {
+    border-color: var(--admin-border-focus);
+    box-shadow: var(--shadow-glow);
+    background: var(--admin-card-hover);
+}
+
+.stats-editor {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--admin-border);
+}
+
+.stats-editor h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--admin-text);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--spacing-sm);
+}
+
+.stat-editor label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    color: var(--admin-text-muted);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.stat-editor input {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid var(--admin-border);
+    border-radius: 10px;
+    color: var(--admin-text);
+    font-size: 1rem;
+    transition: all var(--transition-base);
+}
+
+.stat-editor input:focus {
+    border-color: var(--admin-accent);
+    box-shadow: 0 0 0 3px rgba(0, 208, 255, 0.12);
+}
+
+/* ============================================
+   Skills Editor
+   ============================================ */
+.skills-editor {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.skill-category-editor {
+    padding: var(--spacing-md);
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--admin-border);
+    border-radius: 16px;
+    transition: all var(--transition-base);
+}
+
+.skill-category-editor:hover {
+    background: rgba(0, 0, 0, 0.35);
+    border-color: var(--admin-border-focus);
+}
+
+.skill-category-editor h4 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--admin-accent);
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.skill-item-editor {
+    margin-bottom: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    transition: background var(--transition-base);
+}
+
+.skill-item-editor:hover {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.skill-item-editor .form-group {
+    margin-bottom: var(--spacing-xs);
+}
+
+.skill-item-editor input[type="text"],
+.skill-item-editor input[type="number"] {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   Projects Editor
+   ============================================ */
+.projects-editor {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.project-editor {
+    padding: var(--spacing-md);
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--admin-border);
+    border-radius: 16px;
+    position: relative;
+    transition: all var(--transition-base);
+}
+
+.project-editor:hover {
+    background: rgba(0, 0, 0, 0.35);
+    border-color: var(--admin-border-focus);
+    box-shadow: var(--shadow-sm);
+}
+
+.project-editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.project-editor-header h4 {
+    color: var(--admin-accent);
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.delete-project-btn {
+    padding: 8px 16px;
+    background: rgba(239, 68, 68, 0.12);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #fca5a5;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all var(--transition-base);
+}
+
+.delete-project-btn:hover {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: var(--admin-error);
+    color: white;
+    transform: translateY(-1px);
+}
+
+.project-editor .form-group textarea {
+    min-height: 90px;
+}
+
+/* ============================================
+   Messages List
+   ============================================ */
+.messages-list {
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: var(--spacing-xs);
+}
+
+.message-item {
+    padding: var(--spacing-md);
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--admin-border);
+    border-radius: 16px;
+    margin-bottom: var(--spacing-sm);
+    transition: all var(--transition-base);
+}
+
+.message-item:hover {
+    background: rgba(0, 0, 0, 0.35);
+    border-color: var(--admin-border-focus);
+    transform: translateX(4px);
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-sm);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid var(--admin-border);
+}
+
+.message-info h4 {
+    color: var(--admin-accent);
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.message-info p {
+    color: var(--admin-text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 0.15rem;
+}
+
+.message-date {
+    color: var(--admin-text-muted);
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.message-content {
+    color: var(--admin-text);
+    line-height: 1.7;
+}
+
+.empty-state {
+    text-align: center;
+    color: var(--admin-text-muted);
+    padding: var(--spacing-xl);
+    font-style: italic;
+    font-size: 1rem;
+}
+
+/* ============================================
+   Loading State
+   ============================================ */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--admin-accent);
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 992px) {
+    :root {
+        --spacing-lg: 1.5rem;
+        --spacing-xl: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        padding: var(--spacing-lg);
+        margin: var(--spacing-sm);
+        border-radius: 20px;
+    }
+
+    .login-header h1 {
+        font-size: 1.875rem;
+    }
+
+    .admin-logo img {
+        height: 60px;
+    }
+
+    .admin-header-content {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        padding: var(--spacing-sm);
+    }
+
+    .admin-brand {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .admin-actions {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .admin-actions .btn {
+        flex: 1;
+        min-width: 120px;
+    }
+
+    .admin-container {
+        padding: 0 var(--spacing-sm);
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .editor-card {
+        padding: var(--spacing-md);
+    }
+
+    .message-header {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+
+    .message-date {
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    .btn {
+        padding: 12px 20px;
+    }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+@media print {
+    .admin-header,
+    .admin-actions,
+    .btn {
+        display: none;
+    }
+
+    .admin-section {
+        page-break-inside: avoid;
+    }
+}
+
+/* ============================================
+   Accessibility
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus visible for keyboard navigation */
+:focus-visible {
+    outline: 2px solid var(--admin-accent);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --admin-border: rgba(0, 208, 255, 0.5);
+        --admin-text-muted: rgba(255, 255, 255, 0.9);
+    }
+}

@@ -1,0 +1,74 @@
+*, html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 10px;
+    background-color: #FEC96D;
+}
+.gallary{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+    "rasm1 rasm2 rasm3 rasm4 rasm5"
+    "rasm1 rasm6 rasm3 rasm7 rasm5"
+    "rasm8 rasm6 rasm9 rasm7 rasm10"
+    "rasm8 rasm11 rasm9 rasm12 rasm10"
+    "rasm13 rasm11 rasm14 rasm12 rasm15"
+    ;
+    gap: 10px;
+}
+.rasm{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+
+}
+.rasm1{
+    grid-area: rasm1;
+}
+.rasm2{
+    grid-area: rasm2;
+}
+.rasm3{
+    grid-area: rasm3;
+}
+.rasm4{
+    grid-area: rasm4;
+}
+.rasm5{
+    grid-area: rasm5;
+}
+.rasm6{
+    grid-area: rasm6;
+}
+.rasm7{
+    grid-area: rasm7;
+}
+.rasm8{
+    grid-area: rasm8;
+}
+.rasm9{
+    grid-area: rasm9;
+}
+.rasm10{
+    grid-area: rasm10;
+}
+.rasm11{
+    grid-area: rasm11;
+}
+.rasm12{
+    grid-area: rasm12;
+}
+.rasm13{
+    grid-area: rasm13;
+}
+.rasm14{
+    grid-area: rasm14;
+}
+.rasm15{
+    grid-area: rasm15;
+}

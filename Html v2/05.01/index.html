@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-theme="light">
+    <header>
+        <div id="icons">
+            <i class="bi bi-megaphone-fill"></i>
+            <i class="bi bi-list"></i>
+        </div>
+    </header>
+    <section>
+        <div id="logo">
+            <img src="duckduckgo-svgrepo-com.svg" alt="">
+            <h1>DuckDuckGo</h1>
+        </div>
+        <div id="input">
+            <i class="bi bi-search"></i>
+        </div>
+        <p>The search engine that doesn't track you. <a href="#">Help Speared DuckDuckGo!</a></p>
+    </section>
+
+    <script>
+        const body = document.querySelector('body');
+        let button = document.getElementById('logo');
+
+        button.addEventListener('click', () => {
+            if (body.getAttribute('data-theme') === 'light') {
+                body.setAttribute('data-theme', 'dark');
+            } else {
+                body.setAttribute('data-theme', 'light');
+            }
+        });
+    </script>
+</body>
+
+</html>

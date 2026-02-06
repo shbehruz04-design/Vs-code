@@ -1,0 +1,32 @@
+body{
+    background-color: aqua;
+    align-items: center;
+}
+form {
+    margin: ;
+    width: 300px;
+    margin-top: 300px;
+    margin-left: 25%;
+}
+
+select {
+    border-radius: 10px;
+}
+h1{
+    color: rgb(255, 0, 0);
+    font-size: 32px;
+    font-weight: 700;
+}
+#ism{
+    color: rgb(0, 0, 0);
+}
+#erkak{
+color: rgb(244, 6, 6);
+}
+#ayol{
+    color: green;
+}
+#tugma{
+    background-color: black;
+    color: white;
+}

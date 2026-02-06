@@ -1,0 +1,281 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.header {
+    width: 900px;
+    height: 500px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    position: relative;
+}
+
+#img {
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 890px;
+    z-index: -1;
+}
+
+nav {
+    display: flex;
+    margin: 40px 0 0 65px;
+    gap: 20px;
+}
+
+nav>a {
+    text-decoration: none;
+    color: white;
+    align-self: flex-start;
+    margin-top: auto;
+    font-size: 18px;
+    font-weight: 500;
+
+    &:hover {
+        border-bottom: 3.5px solid white;
+    }
+}
+
+a:first-child {
+    font-size: 30px;
+    margin-right: 50px;
+
+    &:hover {
+        border: none;
+    }
+}
+
+.hero1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 650px;
+    height: 500px;
+    padding: 100px;
+    position: relative;
+}
+
+.hero1>a {
+    text-decoration: none;
+    color: black;
+    letter-spacing: 8px;
+    align-self: flex-start;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+
+    &:hover {
+        color: gray;
+    }
+
+}
+
+.hero1>h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero1>p {
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.hero1 .btn {
+    padding: 20px 30px;
+    background-color: black;
+    border: none;
+    margin: 0;
+
+    &:hover {
+        background-color: rgb(93, 92, 92);
+    }
+
+    &:active {
+        background-color: rgba(93, 92, 92, 0.547);
+
+    }
+}
+
+h3 {
+    font-size: 20px;
+    letter-spacing: 7px;
+}
+
+.btn:nth-child(2) {
+    margin-left: -5px;
+}
+
+.btns {
+    margin: 0;
+    padding: 0;
+    align-self: flex-start;
+    margin-left: -100px;
+    margin-top: 51px;
+    gap: 0;
+    position: absolute;
+    left: 100px;
+    bottom: 0;
+
+}
+
+.wrapper {
+    display: flex;
+}
+
+.wrapper2 {
+    display: flex;
+    width: 100%;
+}
+
+p {
+    color: gray;
+}
+
+.furniture-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: #fff;
+}
+#ham{
+    display: none;
+}
+@media (max-width: 1600px) {
+    .header {
+        width: 800px;
+    }
+
+    #img {
+        width: 800px;
+    }
+
+    .hero1 {
+        width: 600px;
+        padding: 80px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .header,
+    #img {
+        width: 100%;
+    }
+
+    .hero1 {
+        width: 100%;
+        height: auto;
+        padding: 60px;
+        align-items: flex-start;
+    }
+
+    .btns {
+        left: 0;
+        margin-left: 0;
+    }
+}
+
+
+@media (max-width: 992px) {
+    nav {
+        margin-left: 30px;
+    }
+
+    .hero1 h1 {
+        font-size: 32px;
+    }
+
+    .hero1 p {
+        font-size: 15px;
+    }
+
+    .furniture-section {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .header {
+        height: 350px;
+    }
+
+    #img {
+        height: 350px;
+    }
+
+    .hero1 {
+        padding: 40px 25px;
+    }
+
+    .hero1 h1 {
+        font-size: 26px;
+    }
+
+    .hero1 p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .btns {
+        position: static;
+        margin-top: 20px;
+        align-self: center;
+    }
+
+    .furniture-section {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .header,
+    .header img {
+        width: 100%;
+    }
+
+    .hero1 h1 {
+        font-size: 22px;
+    }
+
+    .hero1 a {
+        letter-spacing: 4px;
+        font-size: 14px;
+    }
+
+    .hero1 .btn {
+        padding: 15px 20px;
+    }
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}

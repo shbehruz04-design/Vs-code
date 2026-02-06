@@ -1,0 +1,72 @@
+body {
+  background-color: rgb(233, 207, 207);
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans 3", sans-serif;
+}
+
+section {
+  width: 375px;
+  margin: 20px auto;
+  font-family:"Source Sans 3", sans-serif;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 13px;
+}
+.logo img{
+    height: 30px;
+}
+.asosiy{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 13px;
+
+}
+.user h3 {
+  margin: 0;    
+  font-size: 15px;
+  font-weight: 600;
+}
+.user h4{
+    margin: 0;
+    font-size: 12px;
+    color: gray;
+}
+.asosiy p, h4{
+    background-color: white;
+    margin: 0;
+    padding: 0  ;
+    flex-direction:row;
+}
+p{
+    font-size: 16px;
+    font-weight: bolder;
+    flex-direction: column;
+}
+h4{
+    font-size: 13px;
+    flex-direction: row;
+}
+h5{
+    font-weight: 500;
+}
+.rasm{
+    width: 100%;
+}
+.down{
+    padding: 10px ;
+}
+.izoh{
+    display:inline;
+    justify-content: center;
+    flex-direction: row;
+}

@@ -1,0 +1,45 @@
+body {
+    background-color: antiquewhite;
+
+}
+
+img {
+    width: 800px;
+    margin-left: 100px;
+}
+
+nav {
+    margin-left: 40%;
+    color: red;
+}
+
+table {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+    margin-left: 400px;
+}
+
+tr,
+td {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+h1 {
+    text-align: center;
+    align-items: center;
+    text-align: center;
+}
+
+h2 {
+    font-weight: bolder;
+    color: blue;
+    text-align: center;
+}
+
+header,
+main {
+    margin-left: 200px;
+    margin-right: 200px;
+}

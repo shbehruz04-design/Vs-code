@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admin Panel for BDex Group Portfolio Management">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Admin Panel | BDex Group</title>
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="admin.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./logo.svg">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="login-screen" role="main">
+        <div class="login-container">
+            <header class="login-header">
+                <div class="admin-logo">
+                    <img src="./logo.svg" alt="BDex Group Logo" width="280" height="80">
+                </div>
+                <h1>Admin Panel</h1>
+                <p>BDex Group - Portfolio Management System</p>
+            </header>
+            
+            <form id="loginForm" class="login-form" novalidate>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        required 
+                        autocomplete="username"
+                        placeholder="Enter your username"
+                        aria-required="true">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        required 
+                        autocomplete="current-password"
+                        placeholder="Enter your password"
+                        aria-required="true">
+                </div>
+                
+                <button type="submit" class="btn btn-primary" aria-label="Login to admin panel">
+                    Login
+                </button>
+                
+                <div id="loginError" class="error-message" role="alert" aria-live="polite"></div>
+            </form>
+            
+            <footer class="login-footer">
+                <a href="index.html" aria-label="Go back to main portfolio">← Back to Portfolio</a>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="dashboard hidden">
+        <!-- Header -->
+        <header class="admin-header">
+            <div class="admin-header-content">
+                <div class="admin-brand">
+                    <img src="./logo.svg" alt="BDex Group Logo" class="header-logo" width="220" height="50">
+                    <span>Admin Panel</span>
+                </div>
+                <nav class="admin-actions" aria-label="Admin actions">
+                    <button id="saveAllBtn" class="btn btn-primary" aria-label="Save all changes">
+                        💾 Save All Changes
+                    </button>
+                    <button id="logoutBtn" class="btn btn-secondary" aria-label="Logout from admin panel">
+                        🚪 Logout
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <div class="admin-container">
+                
+                <!-- Hero Section Editor -->
+                <section class="admin-section" aria-labelledby="hero-section-title">
+                    <h2 id="hero-section-title" class="section-title">🎯 Hero Section</h2>
+                    <div class="editor-card">
+                        <div class="form-group">
+                            <label for="heroName">Name</label>
+                            <input 
+                                type="text" 
+                                id="heroName" 
+                                placeholder="Your name"
+                                aria-describedby="heroName-help">
+                            <small id="heroName-help" style="color: var(--admin-text-muted); font-size: 0.85rem;">
+                                This will be displayed as your main name on the portfolio
+                            </small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="heroMotto">Motto</label>
+                            <input 
+                                type="text" 
+                                id="heroMotto" 
+                                placeholder="We build, develop and explore"
+                                aria-describedby="heroMotto-help">
+                            <small id="heroMotto-help" style="color: var(--admin-text-muted); font-size: 0.85rem;">
+                                A short tagline that appears below your name
+                            </small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="heroRole">Roles (comma-separated for typing effect)</label>
+                            <input 
+                                type="text" 
+                                id="heroRole" 
+                                placeholder="Full Stack Developer, UI/UX Designer, Problem Solver"
+                                aria-describedby="heroRole-help">
+                            <small id="heroRole-help" style="color: var(--admin-text-muted); font-size: 0.85rem;">
+                                Separate multiple roles with commas for animated typing effect
+                            </small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="heroDescription">Description</label>
+                            <textarea 
+                                id="heroDescription" 
+                                rows="3" 
+                                placeholder="Describe what you do and what makes you unique..."
+                                aria-describedby="heroDescription-help"></textarea>
+                            <small id="heroDescription-help" style="color: var(--admin-text-muted); font-size: 0.85rem;">
+                                A brief introduction that appears in the hero section
+                            </small>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- About Section Editor -->
+                <section class="admin-section" aria-labelledby="about-section-title">
+                    <h2 id="about-section-title" class="section-title">👤 About Section</h2>
+                    <div class="editor-card">
+                        <div class="form-group">
+                            <label for="aboutIntro">Introduction</label>
+                            <textarea 
+                                id="aboutIntro" 
+                                rows="2" 
+                                placeholder="I'm a passionate developer with..."
+                                aria-describedby="aboutIntro-help"></textarea>
+                            <small id="aboutIntro-help" style="color: var(--admin-text-muted); font-size: 0.85rem;">
+                                Opening statement for the about section
+                            </small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="aboutText1">Paragraph 1</label>
+                            <textarea 
+                                id="aboutText1" 
+                                rows="3" 
+                                placeholder="With over X years of experience..."
+                                aria-describedby="aboutText1-help"></textarea>
+                            <small id="aboutText1-help" style="color: var(--admin-text-muted); font-size: 0.85rem;">
+                                Main content paragraph about your experience and skills
+                            </small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="aboutText2">Paragraph 2</label>
+                            <textarea 
+                                id="aboutText2" 
+                                rows="3" 
+                                placeholder="When I'm not coding..."
+                                aria-describedby="aboutText2-help"></textarea>
+                            <small id="aboutText2-help" style="color: var(--admin-text-muted); font-size: 0.85rem;">
+                                Additional information about interests or activities
+                            </small>
+                        </div>
+                        
+                        <div class="stats-editor">
+                            <h3>📊 Statistics</h3>
+                            <div class="stats-grid">
+                                <div class="stat-editor">
+                                    <label for="statProjects">Projects Completed</label>
+                                    <input 
+                                        type="number" 
+                                        id="statProjects" 
+                                        min="0" 
+                                        placeholder="50"
+                                        aria-label="Number of projects completed">
+                                </div>
+                                <div class="stat-editor">
+                                    <label for="statYears">Years Experience</label>
+                                    <input 
+                                        type="number" 
+                                        id="statYears" 
+                                        min="0" 
+                                        placeholder="5"
+                                        aria-label="Years of experience">
+                                </div>
+                                <div class="stat-editor">
+                                    <label for="statClients">Happy Clients</label>
+                                    <input 
+                                        type="number" 
+                                        id="statClients" 
+                                        min="0" 
+                                        placeholder="30"
+                                        aria-label="Number of happy clients">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills Editor -->
+                <section class="admin-section" aria-labelledby="skills-section-title">
+                    <h2 id="skills-section-title" class="section-title">💡 Skills Section</h2>
+                    <div class="editor-card">
+                        <p style="color: var(--admin-text-muted); margin-bottom: var(--spacing-md);">
+                            Edit your skills below. Changes are auto-saved.
+                        </p>
+                        <div id="skillsEditor" class="skills-editor" role="region" aria-label="Skills editor">
+                            <!-- Skills will be dynamically loaded here -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Projects Editor -->
+                <section class="admin-section" aria-labelledby="projects-section-title">
+                    <h2 id="projects-section-title" class="section-title">🚀 Projects Section</h2>
+                    <div class="editor-card">
+                        <p style="color: var(--admin-text-muted); margin-bottom: var(--spacing-md);">
+                            Manage your portfolio projects. Add, edit, or remove projects as needed.
+                        </p>
+                        <div id="projectsEditor" class="projects-editor" role="region" aria-label="Projects editor">
+                            <!-- Projects will be dynamically loaded here -->
+                        </div>
+                        <button id="addProjectBtn" class="btn btn-secondary" style="margin-top: var(--spacing-md);" aria-label="Add new project">
+                            ➕ Add New Project
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Contact Section Editor -->
+                <section class="admin-section" aria-labelledby="contact-section-title">
+                    <h2 id="contact-section-title" class="section-title">📬 Contact Section</h2>
+                    <div class="editor-card">
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address</label>
+                            <input 
+                                type="email" 
+                                id="contactEmail" 
+                                placeholder="hello@example.com"
+                                aria-label="Contact email address">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactPhone">Phone Number</label>
+                            <input 
+                                type="tel" 
+                                id="contactPhone" 
+                                placeholder="+1 (234) 567-890"
+                                aria-label="Contact phone number">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactLocation">Location</label>
+                            <input 
+                                type="text" 
+                                id="contactLocation" 
+                                placeholder="San Francisco, CA"
+                                aria-label="Your location">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactDescription">Contact Description</label>
+                            <textarea 
+                                id="contactDescription" 
+                                rows="3" 
+                                placeholder="I'm always open to discussing new projects..."
+                                aria-label="Contact section description"></textarea>
+                        </div>
+                        
+                        <div style="margin-top: var(--spacing-lg); padding-top: var(--spacing-lg); border-top: 1px solid var(--admin-border);">
+                            <h3 style="margin-bottom: var(--spacing-md); color: var(--admin-accent); font-size: 1.25rem;">
+                                🔗 Social Media Links
+                            </h3>
+                            
+                            <div class="form-group">
+                                <label for="socialGitHub">GitHub URL</label>
+                                <input 
+                                    type="url" 
+                                    id="socialGitHub" 
+                                    placeholder="https://github.com/yourusername"
+                                    aria-label="GitHub profile URL">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="socialLinkedIn">LinkedIn URL</label>
+                                <input 
+                                    type="url" 
+                                    id="socialLinkedIn" 
+                                    placeholder="https://linkedin.com/in/yourusername"
+                                    aria-label="LinkedIn profile URL">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="socialTwitter">Twitter URL</label>
+                                <input 
+                                    type="url" 
+                                    id="socialTwitter" 
+                                    placeholder="https://twitter.com/yourusername"
+                                    aria-label="Twitter profile URL">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="socialDribbble">Dribbble URL</label>
+                                <input 
+                                    type="url" 
+                                    id="socialDribbble" 
+                                    placeholder="https://dribbble.com/yourusername"
+                                    aria-label="Dribbble profile URL">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Messages Viewer -->
+                <section class="admin-section" aria-labelledby="messages-section-title">
+                    <h2 id="messages-section-title" class="section-title">💬 Contact Messages</h2>
+                    <div class="editor-card">
+                        <p style="color: var(--admin-text-muted); margin-bottom: var(--spacing-md);">
+                            Messages submitted through your portfolio contact form will appear here.
+                        </p>
+                        <div id="messagesList" class="messages-list" role="region" aria-label="Contact messages list">
+                            <p class="empty-state">📭 No messages yet. Messages from the contact form will appear here.</p>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer style="text-align: center; padding: var(--spacing-lg) 0; color: var(--admin-text-muted); font-size: 0.9rem;">
+            <p>BDex Group Admin Panel © 2026 | <kbd>Ctrl/Cmd + S</kbd> to save</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="admin.js"></script>
+</body>
+</html>

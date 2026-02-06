@@ -1,0 +1,103 @@
+body{
+     font-family: "Inter", sans-serif;
+}
+.container{
+    margin: 0 auto;
+    width: 1296px;
+    background-color: #1C1C1C;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    font-size: 16px;
+    padding: 3em 0;
+  
+}
+
+.karta{
+    width: 550px;
+    background-color: #23252C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    padding: 2em 0;
+    border-radius: 0.5%;
+}
+
+.karta-asosiy{
+    width: 70%;
+    background-color: #1A1B21;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    padding-top: 25px;
+    padding-bottom: 30px;
+}
+
+.karta-pastki{
+    width: 70%;
+    height: 64px;
+    background-color: #161619;
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    text-decoration: none;
+}
+
+.profil-rasm{
+    width: 70%;
+}
+
+h1, h5,h3 {
+    margin: 0;
+}
+
+.tugmalar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 18px;
+}
+
+.tugma{
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+    transition:  0.1s;
+}
+
+.content {
+    width: 90%;
+    padding: 0 26px;
+    margin-top: 26px;
+}
+.content p{
+    font-weight: 200;
+}
+.social{
+    text-decoration: none;
+    font-size: 30px;
+    color:#918e9b;
+}
+.tugma:hover{
+    background-color: #5093e5;
+    color: white;
+}
+.social:hover{
+    color: #5093e5;
+}
+.tugma2{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+    transition:  0.1s;
+}

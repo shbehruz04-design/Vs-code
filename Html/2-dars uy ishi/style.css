@@ -1,0 +1,25 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+}
+
+form {
+    margin: 200px;
+    width: fit-content;
+    height: fit-content;
+    background-color: #20b2a4;
+    border-radius: 12px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#button {
+    height: 30px;
+    width: 80px;
+    border-radius: 8px;
+    background-color: rgb(214, 214, 214);
+    color: rgb(0, 0, 0);
+}

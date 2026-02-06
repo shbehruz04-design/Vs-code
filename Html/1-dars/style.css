@@ -1,0 +1,22 @@
+#tugma {
+    border-radius: 10px;
+    margin-left: 40%;
+    width: 200px;
+    height: 50px;
+    background-color: rgb(37, 216, 34);
+    color: rgb(0, 0, 0);
+}
+
+h2 {
+    text-align: center;
+    font-size: 60px;
+}
+
+p {
+    text-align: center;
+    font-size: 40px;
+}
+
+#sarlavha {
+    color: blue;
+}

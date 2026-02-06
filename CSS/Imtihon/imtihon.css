@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+.header{
+    max-width: 100%;
+    height: 130px;
+    background-color:  #5d26a2;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0px;
+    padding-left: 450px;
+}
+.header h3{
+    color: #d9b3ff;
+}
+a{
+    color: #BE5103;
+    text-decoration: underline dotted;
+}
+.main-first{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    padding: 30px 0;
+    padding-bottom: 40px;
+    gap: 15px;
+    align-items: flex-start;
+    font-weight: 300;
+}
+.main-first img{
+    width: 600px;
+    height: 380px;
+}
+.main-first p{
+    font-size: 16px;
+    align-items: flex-start;
+    width: 550px;
+    line-height: 20px;
+    font-weight: 400;
+}
+.buttons{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+button{
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 700;
+}
+button:hover{
+    transform: scale(1.1);
+}
+button:active{
+    background-color: white ;
+    color: #5d26a2;
+}
+.btn-hover:active{
+    color: white;
+    background-color: #5d26a2;
+    border: 1px solid white;
+}
+.btn1{
+    background-color:#5d26a2 ;
+    color: #fff;
+}
+.btn2{
+    background-color: rgba(93, 38, 162, 0.2);
+    color: #5d26a2;
+}
+.main-sec{
+    background-color: #5d26a2;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding-left: 450px;
+    padding-bottom: 50px;
+    padding-top: 40px;
+    gap: 15px;
+    align-items: flex-start;
+}
+.main-sec > p{
+    width: 675px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+}
+.imgs{
+    display: flex;
+    justify-content: center;
+    border-radius: 10;
+    gap: 20px;
+}
+.img-text{
+    width: 335px;
+    color: #fff;
+    background-color: black;
+    font-size: 11px;
+    border-radius: 7px;
+}
+.img-text p{
+    padding: 10px;
+    font-weight: 600;
+    line-height: 17px;
+}
+.btn-btm{
+    background-color: #fff;
+    color: #5d26a2;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+.footer h4{
+    color: #5d26a2;
+    font-weight: 500;
+}

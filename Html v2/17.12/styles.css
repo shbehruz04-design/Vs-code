@@ -1,0 +1,29 @@
+/* Non-semantic stylesheet for the student challenge */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Helvetica,Arial,sans-serif;line-height:1.5;color:#222;background:#f5f7fb}
+.site{max-width:1100px;margin:28px auto;padding:20px}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
+.brand{font-weight:700;font-size:20px;color:#0b3d91}
+.menu .menu-item{display:inline-block;margin-left:18px;color:#0b3d91;cursor:pointer}
+.hero{background:linear-gradient(135deg,#6fb1ff 0%,#9ad6ff 100%);padding:48px;border-radius:8px;color:#042b4a;margin-top:18px}
+.hero-title{font-size:28px;font-weight:700;margin-bottom:10px}
+.hero-sub{opacity:0.95;margin-bottom:16px}
+.btn{display:inline-block;background:#042b4a;color:#fff;padding:10px 16px;border-radius:6px}
+.features{display:flex;gap:14px;margin-top:18px}
+.feature{flex:1;background:#fff;padding:16px;border-radius:8px;box-shadow:0 6px 18px rgba(11,61,145,0.06)}
+.feature-title{font-weight:700;margin-bottom:8px;color:#0b3d91}
+.features .feature-text{color:#444}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.card{background:#fff;padding:16px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+.card-title{font-weight:700;margin-bottom:8px;color:#0b3d91}
+.content{display:flex;gap:18px;margin-top:18px}
+.text{flex:2;background:#fff;padding:16px;border-radius:8px}
+.aside{flex:1;background:#fff;padding:16px;border-radius:8px}
+.text-title,.aside-title{font-weight:700;margin-bottom:8px;color:#0b3d91}
+.site-footer{display:flex;justify-content:space-between;margin-top:18px;padding:12px 8px;color:#667;opacity:0.95}
+
+@media (max-width:800px){
+  .features{flex-direction:column}
+  .cards{grid-template-columns:1fr}
+  .content{flex-direction:column}
+}

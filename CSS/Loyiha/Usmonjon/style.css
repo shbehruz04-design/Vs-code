@@ -1,0 +1,156 @@
+
+body{
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    color: #fff;  
+}
+.upper{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 100px;
+    background-color: black;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;   
+}
+li{
+    list-style: none;
+    display: inline-block;
+    gap: 30px;
+    padding: 1px 20px;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+span{
+    color: aqua;
+}
+.hero{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items:center ;
+}
+.hero-text{
+    width: 390px;
+}
+.lower{
+    justify-content: center;
+}
+.line{
+    width: 120px;
+    height: 7px;
+    background-color: aqua;
+    margin: 50px 150px;
+    border-radius: 5px;
+}
+.about{
+    background-color: rgba(40, 40, 40, 0.9);
+    border: 5px solid aqua;
+    text-align: center;
+    width: 220px;
+    height: 75px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    margin: 30px 150px;
+}
+.about-text{
+    background-color: rgba(40, 40, 40, 0.9);
+    border: 5px solid aqua;
+    width: 636px;
+    padding: 10px 30px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    margin: 30px 150px;
+}
+.about-text h3{
+    font-size: 36px;
+    font-family: "Poppins", sans-serif;
+    color: aqua;
+    margin-bottom: 70px;
+    margin-top: 50  px;
+}
+.about-text> p{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+.lower-box{
+    display: flex;
+    justify-content: space-between;
+}
+@media only screen and (min-width:721px){
+    .hero{
+        flex-direction: row;
+    }
+ #menu-img{
+    display: none;
+ }
+     #hero-img{
+        width: 600px;
+    }
+
+}
+@media (max-width:720px){
+
+    nav{
+        display: none;
+    }
+    #menu-img{
+        height: 20px;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+    }
+    .hero{
+        flex-direction: column;
+    }
+    #hero-img{
+        width: 400px;
+    }
+
+    #hero-main-text{
+        font-size: 16em;
+        justify-content: right;
+    }
+    .upper{
+        padding: 0;
+        margin: 0;
+        width: max-content;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    .about{
+        display: flex;
+        justify-content: center;
+        margin: 40px 100px;
+        width: 180px;
+        height: 50px;
+        padding: 5px;
+        text-align: center;
+        padding: 5px 0;
+    }
+    .line{
+        display: flex;
+        justify-content: center;
+        margin: 40px 140px;  
+    }
+    .lower-img{
+        display: none;
+    }
+    .about-text{
+        display: block;
+        flex-direction: column;
+        width: aut;
+    }
+}

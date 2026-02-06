@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+    </style>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+            font-weight: 600;
+        }
+
+        body {
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-family: "Poppins", sans-serif;
+        }
+
+        h1 {
+            background: linear-gradient(to left, blue, violet, gold, blue);
+            background-size: 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            width: fit-content;
+            overflow: hidden;
+            animation: slide 6s linear infinite;
+        }
+
+        @keyframes slide {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        h1 {
+            font-size: 38px;
+            color: rgb(72, 0, 255);
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            width: 45%;
+            height: fit-content;
+            background-color: hsl(0, 10%, 5%);
+            display: block;
+            flex-direction: column;
+            justify-content: left;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 1px white;
+            margin-bottom: 30px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 9px white;
+        }
+
+        .card1 {
+            cursor: default;
+        }
+
+        .card1 p {
+            color: white;
+            font-size: 16px;
+            padding-bottom: 8px;
+        }
+
+        .line {
+            height: 2.5px;
+            width: 95%;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, rgb(72, 0, 255), rgb(216, 111, 146));
+        }
+
+        span {
+            color: rgb(72, 0, 255);
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 17px;
+        }
+
+        span:hover {
+            background-color: rgba(128, 128, 128, 0.2);
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: white;
+        }
+
+        h3 {
+            width: 90%;
+            height: 15%;
+            padding: 10PX;
+            background-color: hsl(0, 0%, 1%);
+            color: white;
+            margin-bottom: 10px;
+            border-radius: 7px;
+            border-left: none;
+            box-shadow: 1px 0 1px whitesmoke;
+        }
+
+        h3:hover {
+            transform: translateX(10px);
+            box-shadow: -5px 0 5px rgba(245, 245, 245, 0.547);
+        }
+
+        .btn {
+            height: 5vh;
+            width: 20%;
+            font-size: 14px;
+            border-radius: 5px;
+            border: none;
+            color: whitesmoke;
+        }
+
+        .btnCard {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .btn1 {
+            background-color: blue;
+        }
+
+        .btn2 {
+            background-color: blueviolet;
+        }
+
+        .btn2:hover {
+            transform: translateY(-5px);
+            background-color: rgba(137, 43, 226, 0.467);
+        }
+
+        .btn3 {
+            background-color: goldenrod;
+        }
+
+        .btn3:hover {
+            transform: translateY(-5px);
+            background-color: goldenrod;
+        }
+
+        .btn1:hover {
+            transform: translateY(-5px);
+            background-color: rgba(0, 0, 255, 0.566);
+        }
+
+        .inputs {
+            display: flex;
+        }
+
+        input {
+            height: 4.5vh;
+            width: 45%;
+            padding-left: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            box-shadow: 0 0 2px white;
+            border-radius: 5px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .tugma {
+            width: 10%;
+            height: 6vh;
+            font-size: 24px;
+            border-radius: 7px;
+            border: none;
+            color: white;
+        }
+
+        .tugmalar {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        #natija {
+            background-color: rgba(46, 45, 45, 0.156);
+            border: 2px solid blue;
+            box-shadow: 0 0 10px blue;
+            border-radius: 7px;
+            color: white;
+            width: 60%;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            height: 7vh;
+            padding-left: 40%;
+        }
+
+        body.qora {
+            background-color: hsl(0, 0%, 7%);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Mening shaxsiy Sahifam</h1>
+    <section class="card card1">
+        <h2>Men haqimda</h2>
+        <div class="line"></div>
+        <p>Ismim: <span id="ism">Bexruz</span></p>
+        <p>Yoshim: <span>17</span></p>
+        <p>Sevimli rangim: <span>Qora</span></p>
+    </section>
+    <section class="card card2">
+        <h2>Sevimli o'yinlarim</h2>
+        <div class="line"></div>
+        <div class="box2">
+            <h3>Futbol</h3>
+            <h3>Shaxmat</h3>
+            <h3>Video o'yinlar</h3>
+        </div>
+
+    </section>
+    <section class="card btnCard">
+        <button class="btn btn1" onclick="salom()">Salom Berish</button>
+        <button class="btn btn2" onclick="rang()">Rang o'zgartirish</button>
+        <button class="btn btn3" onclick="changeName()">Ismni o'zgartirish</button>
+    </section>
+    <section class="card    ">
+        <h2>Matematik Kalkulyator</h2>
+        <div class="line"></div>
+        <div class="inputs">
+            <input id="num1" type="number" placeholder="Birinchi raqam">
+            <input id="num2" type="number" placeholder="Ikkinchi raqam">
+        </div>
+        <div class="tugmalar">
+            <button class="tugma tugma1" id="qush" style="background-color: blue;">+</button>
+            <button class="tugma tugma2" id="ayr" style="background-color: blueviolet;">-</button>
+            <button class="tugma tugma3" id="kup" style="background-color: goldenrod;">*</button>
+            <button class="tugma tugma4" id="bul" style="background-color: red;">/</button>
+        </div>
+        <h4 id="natija"></h4>
+    </section>
+    <script>
+        let ism = document.getElementById("ism")
+        let num1 = document.getElementById("num1")
+        let num2 = document.getElementById("num2")
+        const plus = document.getElementById("qush")
+        const minus = document.getElementById("ayr")
+        const kupaytirish = document.getElementById("kup")
+        const bulish = document.getElementById("bul")
+        let natija = document.getElementById("natija")
+        let body = document.body
+
+        function salom() {
+            alert("Salom! Mening sahifamga xush kelibsiz! 🎉")
+        };
+        function rang() {
+            body.classList.toggle('qora');
+        }
+
+        function changeName() {
+            let ism2 = prompt("Yangi ismingizni yozing")
+            ism.textContent = ism2
+        }
+
+        plus.addEventListener('click', function () {
+            let birinchiSon = +(num1.value)
+            let ikkinchiSon = +(num2.value)
+            let plusNatija = birinchiSon + ikkinchiSon
+            natija.textContent = `Natija : ${plusNatija}`
+
+        })
+        minus.addEventListener('click', function () {
+            let birinchiSon = +(num1.value)
+            let ikkinchiSon = +(num2.value)
+            let minusNatija = birinchiSon - ikkinchiSon
+            natija.textContent = `Natija : ${minusNatija}`
+        })
+        kupaytirish.addEventListener('click', function () {
+            let birinchiSon = +(num1.value)
+            let ikkinchiSon = +(num2.value)
+            let kupNatija = birinchiSon * ikkinchiSon
+            natija.textContent = `Natija : ${kupNatija}`
+        })
+        bulish.addEventListener('click', function () {
+            let birinchiSon = +(num1.value)
+            let ikkinchiSon = +(num2.value)
+            let bulNatija = birinchiSon / ikkinchiSon
+            natija.textContent = `Natija : ${bulNatija}`
+        })
+
+    </script>
+</body>
+
+</html>

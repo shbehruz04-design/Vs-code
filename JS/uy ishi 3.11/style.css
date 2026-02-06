@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-family: "Poppins", sans-serif;
+}
+
+#kirish {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 80vh;
+    background-color: rgb(158, 79, 255, 0.3);
+    border: none;
+    border-radius: 10px;
+    border: 4px solid rgb(93, 60, 155);
+    box-shadow: 7px 15px 50px black;
+}
+
+#kirish h1 {
+    justify-content: center;
+    text-align: center;
+    font-size: 42px;
+    opacity: 0.8;
+}
+#kirish h3{
+    font-size: 30px;
+    opacity: 0.8;
+}
+#kirish input{
+    height: 6.2vh;
+    width: 120px;
+    border: none;
+    font-size: 24px;
+    border:  3.7px solid rgb(93, 60, 155);
+    border-radius: 10px;
+}
+#kirish button{
+    height: 9vh;
+    width: 220px;
+    font-size: 30px;
+    font-weight: 500;
+    background-color: rgb(93, 60, 155);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin: 20px;
+}
+#kirish button:hover{
+    box-shadow:7px 7px 0px rgb(119, 119, 255);
+    border: 7px solid #a6c9ff;
+    cursor: pointer;
+    scale: 1.3;
+    opacity: 0.81;
+}
+#kirish button:active{
+    color: rgb(93, 60, 155);
+    background-color: white;
+}
+#kirish input:hover{
+    scale: 1.2;
+}
+#kirish h2{
+    font-size: 28px;
+    color: rgba(0, 0, 0, 0.9);
+    width: 300px;
+    text-align: center;
+}

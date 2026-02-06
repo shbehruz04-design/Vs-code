@@ -1,0 +1,91 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+div {
+    background-color: red;
+    width: 200px;
+    height: 300px;
+    margin: 10px 10px;
+}
+
+.box1 {
+    width: 250px;
+    height: 350px;
+    text-align: center;
+    border: none;
+    border-radius: 13px;
+    background-color:red;
+    color: whitesmoke;
+}
+
+.box1 img {
+    width: 100%;
+    height: auto;
+    border-radius: 13px;
+}
+.box1 button{
+    width: 160px;
+    height: 35px;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    background-color: black;
+    color: whitesmoke;
+    margin-top: 15px;
+     margin-left: 0px;
+}
+
+.box2 {
+    width: 250px;
+    height: 350px;
+    text-align: center;
+    border: none;
+    border-radius: 13px;
+    background-color: rgb(37, 139, 167);
+    color: whitesmoke;
+}
+
+.box2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 13px;
+    background: fixed;
+    rotate: y;
+    
+}
+.box2 button{
+    width: 160px;
+    height: 35px;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    background-color: black;
+    color: whitesmoke;
+    margin-top: 25px;
+    margin-left: 0px;
+}
+
+.nom {
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.narx {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.haqida{
+    margin: 7px;
+    margin-top: 1px;
+    padding: 0;
+    font-size: 11px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}

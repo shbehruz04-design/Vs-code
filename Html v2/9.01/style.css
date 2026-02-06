@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+*,
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: "Barlow", sans-serif;
+}
+
+.container {
+    background-image: url(./Frame\ 1000008171.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    min-height: 125vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header img {
+    width: 100px;
+    height: fit-content;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+}
+
+.link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    font-size: 17px;
+}
+
+.link:hover {
+    transform: translateY(-5px);
+    border-bottom: 5px solid rgba(0, 221, 255, 0.327);
+
+}
+
+#button {
+    background:linear-gradient(88deg,rgb(235, 90, 61),#eb9a36);
+    border-bottom-left-radius: 17px;
+    border-top-right-radius: 17px;
+    corner-shape:bevel;
+    width: 170px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-family: "Orbitron";
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    top: 0px;
+    right: 0;
+    z-index: 50;
+}
+#button:hover {
+    transform: translateY(-5px);
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+    text-decoration: underline rgb(0, 220, 255);
+    color: rgba(0, 220, 255, 0.5);
+}
+
+
+#leftDec {
+    position: absolute;
+    height: 90vh;
+    width: 40px;
+    height: fit-content;
+    top: 0px;
+    left: 0;
+}
+
+#rightDec {
+    position: absolute;
+    height: 90vh;
+    width: 40px;
+    height: fit-content;
+    top: 0px;
+    right: 0;
+    transform: rotate(180deg);
+}
+
+#centDec {
+    width: 440px;
+    position: absolute;
+    left: 35%;
+    top: 36%;
+}
+
+#droneDec {
+    position: absolute;
+    left: 21%;
+    top: 29%;
+    width: 800px;
+    height: 550px;
+}
+
+#heroTop {
+    background-image: url(./Group\ 1000003203.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 878px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 20%;
+}
+
+h1 {
+    text-align: center;
+    width: 60%;
+    color: rgba(8, 215, 252, 1);
+    font-family: "Orbitron";
+}
+
+#object {
+    width: 900px;
+    height: 66px;
+    height: fit-content;
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+}
+
+#lbDec {
+    width: 250px;
+    height: fit-content;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+
+#lDec {
+    width: 175px;
+    height: fit-content;
+    position: absolute;
+    bottom: 80px;
+    left: 70px;
+}
+
+#rbDec {
+    width: 250px;
+    height: fit-content;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    transform: rotateX(180deg);
+}
+
+#rDec {
+    background-image: url(./Group.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 308px;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 90px;
+    right: 100px;
+}
+
+p {
+    width: 240px;
+    font-size: 13px;
+    color: white;
+    text-align: center;
+}
+
+#h1L {
+    width: 110px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+#h1R {
+    width: 130px;
+    position: absolute;
+    right: 30px;
+}

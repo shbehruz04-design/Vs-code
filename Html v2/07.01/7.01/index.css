@@ -1,0 +1,62 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(244, 244, 244);
+    color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 250px;
+}
+
+.qimorxona {
+    position: relative;
+}
+
+#card2 {
+    left: 50px;
+    top: 50px;
+}
+
+#card3 {
+    left: 100px;
+    top: 100px;
+}
+
+#card4 {
+    left: 150px;
+    top: 150px;
+}
+
+#card5 {
+    left: 200px;
+    top: 200px;
+}
+
+#card6 {
+    left: 250px;
+    top: 250px;
+}
+
+#card7 {
+    left: 300px;
+    top: 300px;
+}
+
+.card {
+    height: fit-content;
+    width: 200px;
+    position: absolute;
+}
+
+.card:hover {
+    z-index: 1;
+    transform: translateX(-20px);
+}

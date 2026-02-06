@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
+                
+    <title>Ball hisoblagich</title>
+    <style>
+        section {
+            width: 600px;
+            height: 500px;
+            background-color: rgb(33, 33, 94);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 100px;
+        }
+
+        .quti {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .mavzu {
+            color: #fff;
+            font-size: 45px;
+            margin: 0;
+            
+        }
+
+        #ball, #ball2 {
+            padding: 20px;
+            background-color: black;
+            color: red;
+            font-size: 84px;
+            margin: 0;
+            font-family: 'Cursed Timer ULiL', sans-serif;
+            border-radius: 3%;
+        }
+
+        #add1, #add2, #add3, .tugma{
+            background-color: transparent;
+            border: 2px solid rgb(154, 171, 219);
+            border-radius: 5px;
+            font-family: 'Cursed Timer ULiL', sans-serif;
+            width: 40px;
+            height: 40px;
+            font-size: 24px;
+            color:rgb(154, 171, 219) ;
+        }
+        .sonlar{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        .reset{
+            background-color: transparent;
+            border: 2px solid rgb(154, 171, 219);
+            border-radius: 5px;
+            font-family: 'Cursed Timer ULiL', sans-serif;
+            width: 100px;
+            height: 40px;
+            font-size: 24px;
+            color:rgb(154, 171, 219) ;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="quti">
+            <h1 class="mavzu">HOME</h1>
+            <p id="ball"> 0</p>
+            <div class="sonlar">
+                <button onclick="homeAdd1()" id="add1">+1</button>
+                <button onclick="homeAdd2()" id="add2">+2</button>
+                <button onclick="homeAdd3()" id="add3">+3</button>
+            </div>
+            <button onclick="resetScoreH()" class="reset">Reset</button>
+        </div>
+        <div class="quti">
+            <h1 class="mavzu">GUEST</h1>
+            <p id="ball2">0</p>
+            <div class="sonlar">
+                <button onclick="guestAdd1()" class="tugma">+1</button>
+                <button onclick="guestAdd2()" class="tugma">+2</button>
+                <button onclick="guestAdd3()" class="tugma">+3</button>
+            </div>
+            <button onclick="resetScoreA()" class="reset">Reset</button>
+        </div>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+
+</html>

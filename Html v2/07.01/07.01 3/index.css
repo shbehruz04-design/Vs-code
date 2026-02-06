@@ -1,0 +1,125 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 50%;
+    background-color: #282828;
+}
+
+.header a {
+    font-size: 26px;
+    color: white;
+    padding: 1px 5px;
+}
+
+.header a:hover {
+    background-color: rgba(37, 36, 36, 0.15);
+    color: white;
+}
+
+.header p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: whitesmoke;
+    padding-top: 10px;
+}
+
+.sar {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.main img {
+    width: 457px;
+    height: auto;
+    overflow: hidden;
+}
+
+.main {
+    position: relative;
+}
+
+.cards .ex {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #FF6B6B;
+    color: white;
+    padding: 5px 10px;
+    z-index: 5;
+}
+
+#brand {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#brand img {
+    width: 22px;
+    height: 15px;
+}
+
+.main .info {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info h2 {
+    font-size: 1rem;
+}
+
+.info button {
+    background-color: #FF6B6B;
+    color: white;
+    border: none;
+    padding: 5px 16px;
+    height: fit-content;
+}
+
+#chaticon {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background-color: #dda15e;
+    position: fixed;
+    bottom: 40px;
+    right: 35%;
+    cursor: pointer;
+    border-radius: 50%;
+}

@@ -1,0 +1,123 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    margin-top: 1px;
+}
+
+div {
+    width: 200px;
+    height: 290px;
+}
+
+p {
+    margin: 15px 5px;
+    opacity: 65%;
+}
+
+h2 {
+    margin: 10px 5px;
+}
+
+.box {
+    margin: 5px 5px;
+    padding: 7px 7px;
+    border: 2px solid black;
+    border-radius: 4px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.box:hover {
+    color: white;
+    background-color: rgb(1, 149, 255);
+}
+
+.box button:hover {
+    color: rgb(1, 149, 255);
+    background-color: white;
+}
+
+.box img {
+    width: 60%;
+    height: auto;
+}
+
+.box button {
+    background-color: black;
+    color: white;
+    width: 180px;
+    height: 35px;
+    border: none;
+    border-radius: 20px;
+    margin-top: -2px;
+}
+
+.box2 {
+    margin: 5px 5px;
+    padding: 7px 7px;
+    border: 2px solid black;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.box2 img {
+    width: 60%;
+    height: auto;
+}
+
+.box2 button {
+    background-color: black;
+    color: white;
+    width: 180px;
+    height: 35px;
+    border: none;
+    border-radius: 20px;
+    margin-top: -2px
+}
+
+.box2:hover {
+    color: white;
+    background-color: rgb(250, 6, 124);
+}
+
+.box2 button:hover {
+    color: rgb(250, 6, 124);
+    background-color: white;
+}
+
+.box3 {
+    margin: 5px 5px;
+    padding: 7px 7px;
+    border: 2px solid black;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.box3:hover {
+    color: white;
+    background-color: rgb(255, 1, 1);
+}
+
+.box3 button:hover {
+    color: rgb(255, 1, 1);
+    background-color: white;
+}
+
+.box3 img {
+    width: 60%;
+    height: auto;
+}
+
+.box3 button {
+    background-color: black;
+    color: white;
+    width: 180px;
+    height: 35px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 2px;
+}
