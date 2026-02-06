@@ -248,6 +248,11 @@ header {
         color: #000;
         font-size: 18px;
         font-weight: 600;
+        &:hover {
+            color: #ffb514;
+            text-decoration:  underline #ffd36a 2px ;
+            padding-bottom: 5px;
+        }
     }
 
     .hero {
