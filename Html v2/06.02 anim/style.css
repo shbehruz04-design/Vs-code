@@ -1,0 +1,21 @@
+*,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    width: 300px;
+    aspect-ratio: 1/2;
+    background-color: black;
+    animation: birinchiAnim 2s ease 1s infinite forwards ;
+}
+
+@keyframes birinchiAnim {
+    from{
+        background-color: greenyellow;
+    }
+    to{
+        background-color: gold;
+    }
+}
