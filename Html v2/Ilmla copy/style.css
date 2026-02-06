@@ -8,15 +8,8 @@ html {
 body {
     font-family: sans-serif;
 }
-body::-webkit-scrollbar-thumb {
-    background-color: rgb(3, 117, 180);
-    border-radius: 15px;
-}
 body::-webkit-scrollbar {
-    background-color: #ffb5148c;
-    border-radius: 4px;
-    width: 8px;
-    border: none;
+ display: none;
 }
 
 
