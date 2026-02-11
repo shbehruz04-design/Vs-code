@@ -1,0 +1,23 @@
+.area {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 100px;
+  aspect-ratio: 1/1;
+  background-color: #ff6347;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  /* border-radius: 15px; */
+  /* corner-shape:scoop; */
+}
+.area:hover .box {
+  transform: scale(0.9) translateX(-100px) translateY(-50px) ;
+}
