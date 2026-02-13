@@ -1,22 +1,536 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jahon School</title>
+    <meta name="description" content="Jahon School uslubidagi to'liq landing sahifa.">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <img src="https://static.tildacdn.one/tild6237-6363-4534-b934-396334646532/Group_338.svg" alt="">
-        <div class="number">
-            +998 78 777 07 07
+
+<body data-theme="dark">
+    <a class="skip-link" href="#main">Asosiy kontentga o'tish</a>
+
+    <header class="site-header" id="top">
+        <div class="container header-inner">
+            <a class="brand" href="#hero" aria-label="Jahon School bosh sahifa">
+                <img class="brand-logo"
+                    src="https://static.tildacdn.one/tild6237-6363-4534-b934-396334646532/Group_338.svg"
+                    alt="Jahon School logo">
+            </a>
+
+            <nav class="desktop-nav" aria-label="Asosiy menyu">
+                <a href="#about">Biz haqimizda</a>
+                <a href="#programs">Dasturlar</a>
+                <a href="#team">Jamoa</a>
+                <a href="#admission">Qabul</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Aloqa</a>
+            </nav>
+
+            <div class="header-right">
+                <a class="phone" href="tel:+998787770707">+998 78 777 07 07</a>
+
+                <button class="lang-btn" type="button" aria-label="Til tanlash">
+                    <img src="https://flagcdn.com/w40/uz.png" alt="" width="24" height="16">
+                    <span>UZB</span>
+                    <span class="lang-arrow" aria-hidden="true"></span>
+                </button>
+
+                <a class="action-btn action-btn-main" href="#contact">Bog'lanish</a>
+
+                <button class="action-btn icon-btn" id="menuOpen" type="button" aria-label="Menyuni ochish"
+                    aria-controls="mobileMenu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <button class="theme-btn" id="themeToggle" type="button" aria-label="Yorug' rejim">
+                    <img id="themeIcon" src="./light_mode_24dp_E3E3E3_FILL1_wght400_GRAD0_opsz24.svg" alt=""
+                        width="24" height="24">
+                </button>
+            </div>
         </div>
-        <img src="https://static.tildacdn.one/tild6330-3938-4637-b538-323632323439/Frame_1948758701.svg" alt="">
-        <button class="bog">Bog'lanish</button>
-        <button class="toggle"><div class="toggle-item"></div>
-        <div class="toggle-item"></div>
-        <div class="toggle-item"></div></button>
     </header>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+        <div class="mobile-overlay" id="menuCloseOverlay"></div>
+        <nav class="mobile-panel" aria-label="Mobil menyu">
+            <button class="mobile-close" id="menuCloseBtn" type="button" aria-label="Menyuni yopish">X</button>
+            <a href="#about">Biz haqimizda</a>
+            <a href="#programs">Dasturlar</a>
+            <a href="#team">Jamoa</a>
+            <a href="#admission">Qabul</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Aloqa</a>
+        </nav>
+    </div>
+
+    <main id="main">
+        <section class="hero section" id="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="pill">"Cambridge LC" o'quv markazidan yangi loyiha:</p>
+                    <h1><span>Jahon</span> tajribasiga asoslangan<br>milliy ta'lim!</h1>
+                    <p class="hero-text">
+                        Jahongir Po'latov - Cambridge LC, Modme, Cambridge Kidzzz va
+                        Jahon School asoschisi, ta'lim sohasida innovatsion tashabbuskor.
+                    </p>
+                    <a class="cta-primary" href="#contact">Ma'lumot olish</a>
+                </div>
+
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="hero-shape"><img src="https://optim.tildacdn.one/tild3065-3561-4031-b631-656134383737/-/resize/974x/-/format/webp/Mask_group-min.png.webp" alt=""></div>
+                    <div class="floating-chip chip-top"><img src="https://static.tildacdn.one/tild6230-6264-4464-b731-356662656561/Group_283.svg" alt=""></div>
+                    <div class="floating-chip chip-mid"><img src="https://static.tildacdn.one/tild6138-3034-4434-b133-643364366436/Group_282.svg" alt=""></div>
+                    <div class="floating-chip chip-bottom"><img src="https://static.tildacdn.one/tild6235-6166-4965-b639-663433313161/Group_285.svg" alt=""></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section problems" id="about">
+            <div class="container narrow">
+                <h2 class="section-title">Qanday muammolarga yechim beramiz?</h2>
+                <p class="section-text">
+                    Ota-onalar va o'quvchilar uchraydigan real savollar uchun aniq yechimlar.
+                </p>
+                <div class="problem-grid">
+                    <article class="problem-card">
+                        <p class="bubble-parent">Ota-ona</p>
+                        <p class="bubble-parent-text">Farzandim maktabda yetarli bilim ololmayapti.</p>
+                        <p class="bubble-school">Jahon School</p>
+                        <p class="bubble-school-text">
+                            Sifatli ta'lim va chuqurlashtirilgan fanlar orqali poydevorni mustahkamlaymiz.
+                        </p>
+                    </article>
+
+                    <article class="problem-card">
+                        <p class="bubble-parent">Ota-ona</p>
+                        <p class="bubble-parent-text">Farzandim qaysi fan va sohaga qiziqishini topolmayapti.</p>
+                        <p class="bubble-school">Jahon School</p>
+                        <p class="bubble-school-text">
+                            Qiziqish tahlili va mentorlik orqali yo'nalishni aniq belgilaymiz.
+                        </p>
+                    </article>
+
+                    <article class="problem-card">
+                        <p class="bubble-parent">Ota-ona</p>
+                        <p class="bubble-parent-text">Muloqot va ijtimoiy ko'nikmalar sust.</p>
+                        <p class="bubble-school">Jahon School</p>
+                        <p class="bubble-school-text">
+                            Maxsus ijtimoiy rivojlanish dasturlari bilan ishonch va jamoaviy ishlashni kuchaytiramiz.
+                        </p>
+                    </article>
+
+                    <article class="problem-card">
+                        <p class="bubble-parent">Ota-ona</p>
+                        <p class="bubble-parent-text">Qo'shimcha kurslarga juda ko'p vaqt ketmoqda.</p>
+                        <p class="bubble-school">Jahon School</p>
+                        <p class="bubble-school-text">
+                            Kompleks dastur doirasida kerakli fanlar bir joyda beriladi.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section opportunities" id="opportunities">
+            <div class="container">
+                <h2 class="section-title">Jahon School imkoniyatlari</h2>
+                <p class="section-text">Farzandingiz o'qishidagi qiyinchiliklarni samarali hal qilishga yordam beramiz.</p>
+
+                <div class="op-grid">
+                    <div class="op-column">
+                        <article class="op-card">
+                            <span class="op-icon">AI</span>
+                            <p>To'liq texnologik maktab: LMS va gamification tizimi</p>
+                        </article>
+                        <article class="op-card">
+                            <span class="op-icon">SP</span>
+                            <p>Ochiq va yopiq sport maydonlari</p>
+                        </article>
+                        <article class="op-card">
+                            <span class="op-icon">BK</span>
+                            <p>Kitobxonlik va mutolaa darslari</p>
+                        </article>
+                    </div>
+
+                    <div class="op-center">
+                        <img src="https://optim.tildacdn.one/tild6464-6461-4366-b033-316234386533/-/resize/732x/-/format/webp/Group_2085663279-min.png.webp" alt="">
+                    </div>
+
+                    <div class="op-column">
+                        <article class="op-card">
+                            <span class="op-icon">AV</span>
+                            <p>Avtomobillar uchun alohida kirish-chiqish yo'lagi</p>
+                        </article>
+                        <article class="op-card">
+                            <span class="op-icon">SF</span>
+                            <p>Qizlar uchun "Safia" qandolatchilik burchagi</p>
+                        </article>
+                        <article class="op-card">
+                            <span class="op-icon">MT</span>
+                            <p>Metroga yaqin qulay joylashuv</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section programs" id="programs">
+            <div class="container">
+                <h2 class="section-title">O'quv dasturlarimiz</h2>
+                <p class="section-text">Har bir yosh bosqichi uchun maxsus o'quv rejasi va rivojlanish yo'nalishi.</p>
+
+                <div class="program-grid">
+                    <article class="program-card">
+                        <span class="program-type">Boshlang'ich</span>
+                        <h3>1-4 sinflar uchun</h3>
+                        <p>
+                            Boshlang'ich bilimlar, mustaqil fikrlash, odob va kundalik ko'nikmalarni shakllantirish.
+                        </p>
+                        <a href="#contact" class="program-btn">Batafsil ma'lumot</a>
+                    </article>
+
+                    <article class="program-card">
+                        <span class="program-type">O'rta</span>
+                        <h3>5-8 sinflar uchun</h3>
+                        <p>
+                            Fanlar poydevorini mustahkamlash, tanqidiy tahlil, xorijiy til va kommunikatsiya.
+                        </p>
+                        <a href="#contact" class="program-btn">Batafsil ma'lumot</a>
+                    </article>
+
+                    <article class="program-card">
+                        <span class="program-type">Yuqori</span>
+                        <h3>9-11 sinflar uchun</h3>
+                        <p>
+                            Chuqurlashtirilgan fanlar, kasbiy yo'nalish va oliygohga tayyorgarlik.
+                        </p>
+                        <a href="#contact" class="program-btn">Batafsil ma'lumot</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section team" id="team">
+            <div class="container">
+                <h2 class="section-title">Bizning jamoa</h2>
+                <p class="section-text">Sifatli ta'lim uchun tajribali mutaxassislar jamoasi.</p>
+
+                <div class="team-row">
+                    <article class="team-card">
+                        <img class="team-photo" src="https://static.tildacdn.one/tild6134-3132-4034-b166-396162333763/Mask_group-6.png" alt="Jahongir Po'latov">
+                        <div class="team-body">
+                            <h3>Jahongir Po'latov</h3>
+                            <p>Jahon School asoschisi</p>
+                        </div>
+                    </article>
+
+                    <article class="team-card">
+                        <img class="team-photo" src="https://static.tildacdn.one/tild6433-3062-4236-b763-353561353061/Mask_group-7.png" alt="Javohir Izzatulloh">
+                        <div class="team-body">
+                            <h3>Javohir Izzatulloh</h3>
+                            <p>Jahon School direktori</p>
+                        </div>
+                    </article>
+
+                    <article class="team-card">
+                        <img class="team-photo" src="https://static.tildacdn.one/tild6539-3563-4233-b136-353566373637/Mask_group-5.png" alt="Akmalxon Rustamov">
+                        <div class="team-body">
+                            <h3>Akmalxon Rustamov</h3>
+                            <p>Qabul va ota-ona bilan ishlash bo'yicha mudir</p>
+                        </div>
+                    </article>
+
+                    <article class="team-card">
+                        <img class="team-photo" src="https://static.tildacdn.one/tild6366-6238-4161-a131-333934626435/Mask_group-4.png" alt="Gulnora Xo'jayeva">
+                        <div class="team-body">
+                            <h3>Gulnora Xo'jayeva</h3>
+                            <p>Boshlang'ich sinf o'qituvchisi</p>
+                        </div>
+                    </article>
+
+                    <article class="team-card">
+                        <img class="team-photo" src="https://static.tildacdn.one/tild6136-3734-4632-a562-626361333461/Mask_group-1.png" alt="Shohrux Abdullayev">
+                        <div class="team-body">
+                            <h3>Shohrux Abdullayev</h3>
+                            <p>Ta'lim jarayoni maslahatchisi</p>
+                        </div>
+                    </article>
+                </div>
+
+                <a class="join-btn" href="#contact">Jamoaga qo'shilish</a>
+            </div>
+        </section>
+
+        <section class="section admission" id="admission">
+            <div class="container">
+                <h2 class="section-title">Qabul jarayoni</h2>
+                <p class="section-text">Qabul bosqichlari aniq va tushunarli ketma-ketlikda olib boriladi.</p>
+
+                <div class="timeline">
+                    <article class="step-card left">
+                        <span class="step-number">01</span>
+                        <h3>Maktabga tashrif</h3>
+                        <p>Maktab hududi va sharoitlari bilan tanishtirish.</p>
+                    </article>
+
+                    <article class="step-card right">
+                        <span class="step-number">02</span>
+                        <h3>Maktab bilan tanishuv</h3>
+                        <p>Ota-onaga dastur, tartib va imkoniyatlar bo'yicha ma'lumot beriladi.</p>
+                    </article>
+
+                    <article class="step-card left">
+                        <span class="step-number">03</span>
+                        <h3>Ota-ona bilan suhbat</h3>
+                        <p>Farzandning maqsadlari, ehtiyojlari va kutilyotgan natijalar aniqlanadi.</p>
+                    </article>
+
+                    <article class="step-card right">
+                        <span class="step-number">04</span>
+                        <h3>Psixolog suhbati</h3>
+                        <p>O'quvchining tayyorgarligi, moslashuvi va individual xususiyatlari baholanadi.</p>
+                    </article>
+
+                    <article class="step-card left">
+                        <span class="step-number">05</span>
+                        <h3>Bilimni baholash</h3>
+                        <p>Asosiy fanlardan bilim darajasi aniqlanib, mos sinfga joylashtiriladi.</p>
+                    </article>
+
+                    <article class="step-card right">
+                        <span class="step-number">06</span>
+                        <h3>Qabul</h3>
+                        <p>Shartnoma rasmiylashtiriladi va o'quvchi yangi guruhga biriktiriladi.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section faq" id="faq">
+            <div class="container narrow">
+                <h2 class="section-title">Ko'p beriladigan savollar</h2>
+                <p class="section-text">Tez-tez so'raladigan savollarga oldindan tayyorlangan javoblar.</p>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Jahon School'da yotoqxona bormi?</summary>
+                        <p>Hozirgi vaqtda asosiy e'tibor kunduzgi ta'limga qaratilgan.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Pulni bo'lib to'lash imkoni bormi?</summary>
+                        <p>Ha, to'lovni bo'lib to'lash uchun bir nechta qulay variantlar mavjud.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Narx tez-tez o'zgarib turadimi?</summary>
+                        <p>Narxlar odatda semestr yoki yillik asosda barqaror belgilanadi.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Farzandning davomati va o'zlashtirishini qanday kuzataman?</summary>
+                        <p>Ota-onalar uchun muntazam hisobot va aloqa kanallari yo'lga qo'yilgan.</p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Chegirmalar bormi?</summary>
+                        <p>Mavsumiy va ijtimoiy toifalar bo'yicha amaldagi chegirmalar bo'lishi mumkin.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact-band" id="contact">
+            <div class="container contact-wrap">
+                <div class="contact-info">
+                    <h2>Maktabimiz haqida savollaringiz bormi?</h2>
+                    <p>Ma'lumotlaringizni qoldiring va biz siz bilan tez orada bog'lanamiz.</p>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <label for="fullName">Ism-familya</label>
+                    <input id="fullName" name="fullName" type="text" placeholder="Ism-familya" required>
+
+                    <label for="phoneNumber">Telefon</label>
+                    <input id="phoneNumber" name="phoneNumber" type="tel" placeholder="+998 90 123 45 67" required>
+
+                    <button type="submit">Konsultatsiya olish</button>
+                    <p class="form-note">Forma demo rejimda ishlaydi.</p>
+                    <p class="form-status" id="formStatus" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand-wrap">
+                <img class="brand-logo"
+                    src="https://static.tildacdn.one/tild6237-6363-4534-b934-396334646532/Group_338.svg"
+                    alt="Jahon School logo">
+                <a class="footer-main-btn" href="#contact">Konsultatsiya olish</a>
+            </div>
+
+            <div>
+                <h3>Aloqa uchun</h3>
+                <a href="tel:+998787770707">+998 78 777 07 07</a>
+                <a href="#hero">Bosh sahifa</a>
+                <a href="#about">Biz haqimizda</a>
+                <a href="#team">Jahon School'da karera</a>
+            </div>
+
+            <div>
+                <h3>Ijtimoiy tarmoqlar</h3>
+                <a href="#" aria-label="YouTube">YouTube</a>
+                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="#" aria-label="Telegram">Telegram</a>
+                <p class="footer-address">Manzil: Toshkent shahri, Olmazor tumani, Beruniy ko'chasi, 83-uy</p>
+            </div>
+
+            <div class="map-wrap">
+                <iframe title="Jahon School joylashuvi"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=69.2040%2C41.3380%2C69.2240%2C41.3520&amp;layer=mapnik&amp;marker=41.3450%2C69.2140"
+                    loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>Copyright <span id="year"></span> Jahon School. All Rights Reserved.</p>
+            <a href="#top">Yuqoriga</a>
+        </div>
+    </footer>
+
+    <script>
+        (() => {
+            const body = document.body;
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = document.getElementById('themeIcon');
+            const menuOpen = document.getElementById('menuOpen');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuCloseBtn = document.getElementById('menuCloseBtn');
+            const menuCloseOverlay = document.getElementById('menuCloseOverlay');
+            const contactForm = document.getElementById('contactForm');
+            const formStatus = document.getElementById('formStatus');
+            const year = document.getElementById('year');
+
+            const icons = {
+                dark: './light_mode_24dp_E3E3E3_FILL1_wght400_GRAD0_opsz24.svg',
+                light: './dark_mode_24dp_E3E3E3_FILL1_wght400_GRAD0_opsz24.svg'
+            };
+
+            const setTheme = (theme) => {
+                body.dataset.theme = theme;
+                themeIcon.src = theme === 'dark' ? icons.dark : icons.light;
+                themeToggle.setAttribute('aria-label', theme === 'dark' ? "Yorug' rejim" : "Tungi rejim");
+                localStorage.setItem('jahon-theme', theme);
+            };
+
+            const savedTheme = localStorage.getItem('jahon-theme');
+            if (savedTheme === 'dark' || savedTheme === 'light') {
+                setTheme(savedTheme);
+            } else {
+                setTheme('dark');
+            }
+
+            themeToggle.addEventListener('click', () => {
+                const nextTheme = body.dataset.theme === 'dark' ? 'light' : 'dark';
+                setTheme(nextTheme);
+            });
+
+            const closeMenu = () => {
+                mobileMenu.hidden = true;
+                menuOpen.setAttribute('aria-expanded', 'false');
+                document.documentElement.style.overflow = '';
+            };
+
+            const openMenu = () => {
+                mobileMenu.hidden = false;
+                menuOpen.setAttribute('aria-expanded', 'true');
+                document.documentElement.style.overflow = 'hidden';
+            };
+
+            menuOpen.addEventListener('click', () => {
+                if (mobileMenu.hidden) openMenu();
+                else closeMenu();
+            });
+
+            menuCloseBtn.addEventListener('click', closeMenu);
+            menuCloseOverlay.addEventListener('click', closeMenu);
+
+            mobileMenu.querySelectorAll('a').forEach((link) => {
+                link.addEventListener('click', closeMenu);
+            });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape') closeMenu();
+            });
+
+            contactForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+                formStatus.textContent = "Rahmat. Tez orada siz bilan bog'lanamiz.";
+                contactForm.reset();
+            });
+
+            const revealSelector = [
+                "#about .section-title",
+                "#about .section-text",
+                ".problem-card",
+                "#opportunities .section-title",
+                "#opportunities .section-text",
+                ".op-card",
+                ".student-figure",
+                ".op-center img",
+                "#programs .section-title",
+                "#programs .section-text",
+                ".program-card",
+                "#team .section-title",
+                "#team .section-text",
+                ".team-card",
+                ".join-btn",
+                "#admission .section-title",
+                "#admission .section-text",
+                ".step-card",
+                "#faq .section-title",
+                "#faq .section-text",
+                ".faq-item",
+                ".contact-info",
+                ".contact-form",
+                ".footer-grid > div",
+                ".footer-bottom p",
+                ".footer-bottom a"
+            ].join(",");
+
+            const revealNodes = Array.from(document.querySelectorAll(revealSelector));
+            revealNodes.forEach((node, index) => {
+                node.classList.add("reveal");
+                node.style.transitionDelay = `${(index % 4) * 70}ms`;
+            });
+
+            const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            if (reduceMotion || !("IntersectionObserver" in window)) {
+                revealNodes.forEach((node) => node.classList.add("in-view"));
+            } else {
+                const revealObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach((entry) => {
+                        if (!entry.isIntersecting) return;
+                        entry.target.classList.add("in-view");
+                        observer.unobserve(entry.target);
+                    });
+                }, {
+                    threshold: 0.16,
+                    rootMargin: "0px 0px -8% 0px"
+                });
+
+                revealNodes.forEach((node) => revealObserver.observe(node));
+            }
+
+            year.textContent = new Date().getFullYear();
+        })();
+    </script>
 </body>
+
 </html>
