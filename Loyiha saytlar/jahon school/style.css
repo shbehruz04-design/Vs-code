@@ -28,12 +28,26 @@
 
 * {
     box-sizing: border-box;
+    animation: anim 0.5s ease 1 forwards;
 }
 
 html,
 body {
-    margin: 0;
     padding: 0;
+    margin: 0;
+}
+
+@keyframes anim {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
 }
 
 body {
@@ -78,6 +92,7 @@ button {
 
 .head {
     min-height: 92px;
+    animation: ;
     display: flex;
     align-items: center;
 }
@@ -321,7 +336,7 @@ button {
     position: fixed;
     inset: 0;
     z-index: 300;
-    transition: opacity 3s ease ;
+    transition: opacity 3s ease;
 }
 
 .contact-overlay {
@@ -375,7 +390,7 @@ button {
     gap: 14px;
 }
 
-.contact-form > input {
+.contact-form>input {
     height: 64px;
     border: 2px solid #e0e0e4;
     border-radius: 16px;
@@ -568,4 +583,3 @@ button {
         height: 62px;
     }
 }
-
