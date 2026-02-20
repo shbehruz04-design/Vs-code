@@ -7,11 +7,15 @@
 body {
   font-family: system-ui;
   background-color: black;
+  position: relative;
 }
 
 .header {
   display: flex;
   background-color: rgb(18, 18, 18);
+  width: 100%;
+  position: fixed;
+  top: 0;
 }
 
 .nav {
@@ -20,10 +24,23 @@ body {
   align-items: center;
   margin: 0 auto;
   gap: 20px;
+  padding: 10px 0;
 }
 .nav__link {
   text-decoration: none;
   color: white;
+}
+
+.section1 {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.section1 h1 {
+  color: white;
+  font-size: 26px;
+  width: 70%;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

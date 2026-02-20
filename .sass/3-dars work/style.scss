@@ -1,3 +1,4 @@
+@use "varibles" as v;
 *, html{
     margin: 0;
     padding: 0;
@@ -6,10 +7,14 @@
 body{
     font-family: system-ui;
     background-color: black;
+    position: relative;
 }
 .header{
     display: flex;
-    background-color: rgb(18, 18, 18);
+    background-color: v.$secondCl;
+    width: 100%;
+    position: fixed;
+    top: 0;
 }
 .nav{
     display: flex;
@@ -17,8 +22,20 @@ body{
     align-items: center;
     margin: 0 auto;
     gap: 20px;
+    padding: 10px 0;
     &__link{
         text-decoration: none;
-        color: white;
+        color: v.$baseCl;
+    }
+}
+.section1{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    h1{
+        color: v.$baseCl;
+        font-size: 26px;
+        width: 70%;
+        text-align: center;
     }
 }
