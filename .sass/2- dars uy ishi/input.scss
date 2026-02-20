@@ -1,0 +1,185 @@
+$white: hsl(0, 0%, 100%);
+$stone-100: hsl(30, 54%, 90%);
+$stone-150: hsl(30, 18%, 87%);
+$stone-600: hsl(30, 10%, 34%);
+$stone-900: hsl(24, 5%, 18%);
+$brown-800: hsl(14, 45%, 36%);
+$rose-800: hsl(332, 51%, 32%);
+$rose-50: hsl(330, 100%, 98%);
+
+$font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+* {
+  box-sizing: border-box;
+  font-family: $font-body;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 7.75rem 1.5rem;
+  background-color: $stone-100;
+  color: $stone-600;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+p {
+  margin: 0;
+}
+
+.retsept {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  background-color: $white;
+
+  &__hero {
+    display: block;
+    width: 100%;
+    border-radius: 0.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  h1 {
+    color: $stone-900;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__intro {
+    margin-bottom: 2rem;
+  }
+}
+
+.tayyorlanish-vaqti {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background-color: $rose-50;
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: $rose-800;
+  }
+
+  ul {
+    margin: 1rem 0 0;
+    padding-left: 1.5rem;
+  }
+
+  li {
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  li {
+    color: $rose-800;
+    font-size: 0.75rem;
+  }
+
+  span {
+    color: $stone-900;
+    font-weight: 700;
+  }
+}
+
+.section {
+  h2 {
+    color: $brown-800;
+    font-size: 1.75rem;
+  }
+
+  ul,
+  ol {
+    margin: 1.5rem 0 0;
+    padding-left: 1.5rem;
+  }
+
+  li {
+    padding-left: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  strong {
+    color: $stone-900;
+  }
+}
+
+.masalliqlar {
+  .masalliq::marker {
+    color: $brown-800;
+    font-size: 0.75rem;
+  }
+}
+
+.instruktsiya {
+  ol li {
+    color: $brown-800;
+    font-weight: 700;
+  }
+}
+
+.section--divider {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid $stone-150;
+}
+
+.ozuqa {
+  p {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__qatori {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 0.75rem 2rem;
+    border-bottom: 1px solid $stone-150;
+
+    strong {
+      color: $brown-800;
+      font-weight: 700;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+
+  .retsept {
+    padding: 0 2rem 2rem;
+    border-radius: 0;
+
+    &__hero {
+      margin: 0 -2rem 2.5rem;
+      width: calc(100% + 4rem);
+      border-radius: 0;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+    }
+  }
+
+  .ozuqa__qatori {
+    padding: 0.75rem 1.75rem;
+  }
+}

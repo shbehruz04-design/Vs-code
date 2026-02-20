@@ -1,0 +1,75 @@
+$asosiy-rang: #f55555;
+$border-radius: 5px;
+$asosiy-font1: 'Sans-serif';
+$asosiy-font2: 'Arial';
+
+@mixin yonmayon($joy, $qiymat) {
+    display: flex;
+    align-items: center;
+    gap: $joy;
+    justify-content: $qiymat;
+}
+
+@mixin Asoisytugma($bg) {
+    border-radius: 10px;
+    padding: 10px 50px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: $bg;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h2 {
+        color: $asosiy-rang;
+        font-family: $asosiy-font2;
+    }
+    nav {
+        @include yonmayon(40px, 'space-between');
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .tugmalar {
+        @include yonmayon(15px, 'center');
+        
+    }
+}
+
+.btn1 {
+    @include Asoisytugma(green); 
+    color: white;
+}
+
+.btn2 {
+    @include Asoisytugma(black);
+    color: white;
+}
+
+
+.store {
+    h2 {
+        color: blue;
+    }
+}
+
+
+.mahsulotlar {
+    display: flex;
+    align-items: center;
+    li {
+        width: 300px;
+        border-radius: $border-radius;
+        h3 {
+            font-size: 20px;
+        }
+
+        button {
+            @include Asoisytugma(blue);
+        }
+    }
+}   

@@ -1,0 +1,68 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header h2 {
+  color: #f55555;
+  font-family: "Arial";
+}
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: "space-between";
+}
+header nav a {
+  text-decoration: none;
+}
+header .tugmalar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: "center";
+}
+
+.btn1 {
+  border-radius: 10px;
+  padding: 10px 50px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: green;
+  color: white;
+}
+
+.btn2 {
+  border-radius: 10px;
+  padding: 10px 50px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: black;
+  color: white;
+}
+
+.store h2 {
+  color: blue;
+}
+
+.mahsulotlar {
+  display: flex;
+  align-items: center;
+}
+.mahsulotlar li {
+  width: 300px;
+  border-radius: 5px;
+}
+.mahsulotlar li h3 {
+  font-size: 20px;
+}
+.mahsulotlar li button {
+  border-radius: 10px;
+  padding: 10px 50px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: blue;
+}/*# sourceMappingURL=input.css.map */

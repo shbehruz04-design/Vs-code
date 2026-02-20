@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 7.75rem 1.5rem;
+  background-color: hsl(30, 54%, 90%);
+  color: hsl(30, 10%, 34%);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+p {
+  margin: 0;
+}
+
+.retsept {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  background-color: hsl(0, 0%, 100%);
+}
+.retsept__hero {
+  display: block;
+  width: 100%;
+  border-radius: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+.retsept h1 {
+  color: hsl(24, 5%, 18%);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.retsept__intro {
+  margin-bottom: 2rem;
+}
+
+.tayyorlanish-vaqti {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background-color: hsl(330, 100%, 98%);
+}
+.tayyorlanish-vaqti h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: hsl(332, 51%, 32%);
+}
+.tayyorlanish-vaqti ul {
+  margin: 1rem 0 0;
+  padding-left: 1.5rem;
+}
+.tayyorlanish-vaqti li {
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+.tayyorlanish-vaqti li {
+  color: hsl(332, 51%, 32%);
+  font-size: 0.75rem;
+}
+.tayyorlanish-vaqti span {
+  color: hsl(24, 5%, 18%);
+  font-weight: 700;
+}
+
+.section h2 {
+  color: hsl(14, 45%, 36%);
+  font-size: 1.75rem;
+}
+.section ul,
+.section ol {
+  margin: 1.5rem 0 0;
+  padding-left: 1.5rem;
+}
+.section li {
+  padding-left: 1rem;
+  margin-bottom: 0.75rem;
+}
+.section strong {
+  color: hsl(24, 5%, 18%);
+}
+
+.masalliqlar .masalliq::marker {
+  color: hsl(14, 45%, 36%);
+  font-size: 0.75rem;
+}
+
+.instruktsiya ol li {
+  color: hsl(14, 45%, 36%);
+  font-weight: 700;
+}
+
+.section--divider {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.ozuqa p {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+.ozuqa__qatori {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+.ozuqa__qatori strong {
+  color: hsl(14, 45%, 36%);
+  font-weight: 700;
+}
+.ozuqa__qatori:last-child {
+  border-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+  .retsept {
+    padding: 0 2rem 2rem;
+    border-radius: 0;
+  }
+  .retsept__hero {
+    margin: 0 -2rem 2.5rem;
+    width: calc(100% + 4rem);
+    border-radius: 0;
+  }
+  .retsept h1 {
+    font-size: 2.25rem;
+  }
+  .ozuqa__qatori {
+    padding: 0.75rem 1.75rem;
+  }
+}/*# sourceMappingURL=input.css.map */

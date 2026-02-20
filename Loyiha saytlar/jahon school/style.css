@@ -1,6 +1,6 @@
 ﻿:root {
     --font: system-ui;
-    --bg: #f3f5f8;
+    --bg: #ffff;
     --text: #08144a;
     --top-bg: #f6f7f9;
     --top-border: #2a3953;
@@ -12,6 +12,7 @@
     --tag-bg: #edf0f5;
     --panel-bg: #ffffff;
     --panel-text: #08144a;
+    --bg-img: url("https://static.tildacdn.one/tild6130-3265-4237-b963-373566303738/Frame_2087326401.svg");
 }
 
 [data-theme="dark"] {
@@ -24,11 +25,11 @@
     --tag-bg: #1f2a4c;
     --panel-bg: #0f1938;
     --panel-text: #f2f5ff;
+    --bg-img: url("https://static.tildacdn.one/tild3432-3565-4163-a534-653138656637/Frame_2087326401.svg");
 }
 
 * {
     box-sizing: border-box;
-    animation: anim 0.5s ease 1 forwards;
 }
 
 html,
@@ -92,7 +93,6 @@ button {
 
 .head {
     min-height: 92px;
-    animation: ;
     display: flex;
     align-items: center;
 }
@@ -181,13 +181,15 @@ button {
     min-height: 100vh;
     padding-top: 42px;
     padding-bottom: 12px;
+    animation: anim 0.5s ease 1;
 }
 
 .hero-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 14px;
+    gap: 20px;
+    padding: 0 50px;
 }
 
 .tag {
@@ -237,7 +239,7 @@ button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
+    font-size: 26px;
 }
 
 .right {
@@ -435,151 +437,263 @@ button {
     font-size: 34px;
     font-weight: 700;
 }
+.hero2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 70px;
+    h2{
+        font-size: clamp(34px, 8vw, 60px) ;
+        text-wrap: wrap;
+        font-weight: 800;
+        text-align: center;
+    }
+    >p{
+        font-size: clamp(16px, 5vw, 18px);
+        margin-bottom: 50px;
+        text-align: center;
+        color: var(--muted);
+    }
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "card1 card2"
+    "card3 card4"
+    ;
+    gap: 50px;
+    padding: 0px 50px;
+
+}
+
+.card {
+    background-image: var(--bg-img);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: auto;
+    padding: 10px 30px;
+    border-radius: 18px;
+    h3{
+        font-size:clamp(20px, 5vw, 26px) ;
+    }
+    p{
+        width: 50%;
+        font-size: clamp(16px, 3vw, 18px);
+        color: var(--muted);
+    }
+}
+
+.card1 {
+    grid-area: card1;
+    animation: cardLeft 1s ease 1 forwards;
+}
+
+.card2 {
+    grid-area: card2;
+    animation: cardRight 1s ease 1 forwards;
+}
+
+.card3 {
+    grid-area: card3;
+    animation: cardLeft 1s ease 1 forwards;
+}
+
+.card4 {
+    grid-area: card4;
+    animation: cardRight 1s ease 1 forwards;
+}
+@keyframes cardLeft {
+    from{
+        transform:translateX(-100%) ;
+        opacity: 0;
+    }
+    to{
+        transform:translateX(0px) ;
+        opacity: 1;
+    }
+}
+@keyframes cardRight {
+    from{
+        transform:translateX(100%) ;
+        opacity: 0;
+    }
+    to{
+        transform:translateX(0px) ;
+        opacity: 1;
+    }
+}
+
+
 
 @media (max-width: 768px) {
     .c {
         padding-left: 12px;
         padding-right: 12px;
     }
-
+    
     .head {
         min-height: 72px;
     }
-
+    
     .logo img {
         width: 170px;
     }
-
+    
     .phone,
     .til,
     .btn {
         display: none;
     }
-
+    
     .menu-btn {
         width: 44px;
         height: 44px;
         border-radius: 13px;
         gap: 4px;
     }
-
+    
     .menu-btn span {
         width: 17px;
         height: 2px;
     }
-
+    
     .hero {
         min-height: auto;
         padding-top: 24px;
         padding-bottom: 28px;
+        text-align: center;
     }
-
+    
     .hero-box {
         grid-template-columns: 1fr;
         gap: 22px;
     }
-
+    
     .tag {
-        min-height: 40px;
+        height: 30px;
         padding: 10px 14px;
         border-radius: 11px;
-        font-size: 16px;
+        font-size: 14px;
     }
-
+    
     .title {
         font-size: 52px;
         line-height: 1;
     }
-
+    
     .text {
         margin-top: 16px;
         font-size: 18px;
     }
-
+    
     .cta {
         margin-top: 24px;
         max-width: 100%;
         min-height: 68px;
         border-radius: 18px;
-        font-size: 24px;
+        font-size: 20px;
     }
-
+    
     .right {
         max-width: 100%;
     }
-
+    
     .i1 {
         width: 106px;
         left: 5%;
         top: 8%;
     }
-
+    
     .i2 {
         width: 58px;
         right: 5%;
         top: 43%;
     }
-
+    
     .i3 {
         width: 88px;
         right: 14%;
     }
-
+    
     .panel {
         width: 100%;
         max-width: 420px;
         padding: 18px 22px 24px;
     }
-
+    
     .close {
         width: 40px;
         height: 40px;
         font-size: 40px;
     }
-
+    
     .panel-logo {
         width: 190px;
     }
-
+    
     .links {
         margin-top: 30px;
         gap: 14px;
     }
-
+    
     .links a {
         font-size: 28px;
     }
-
+    
     .panel-btn {
         min-height: 68px;
         border-radius: 18px;
         font-size: 24px;
     }
-
+    
     .contact-panel {
         width: 100%;
         max-width: 92vw;
         padding: 18px 16px 20px;
     }
-
+    
     .contact-panel h2 {
         font-size: 36px;
     }
-
+    
     .contact-panel p {
         font-size: 16px;
     }
-
+    
     .phone-code {
         font-size: 20px;
     }
-
+    
     .phone-row input {
         font-size: 24px;
     }
-
+    
     .contact-form button {
         font-size: 24px;
         height: 62px;
+    }
+    .hero2{
+        padding: 0 10px;
+    }
+    .cards{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        
+        ;
+        padding: 0 5px;
+        height: auto;
+            overflow-x: auto;
+    padding-bottom: 8px;
+    scroll-snap-type: x mandatory;
+    }
+    .card p{
+        width: 100%;
     }
 }
