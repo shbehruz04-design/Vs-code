@@ -1,46 +1,274 @@
-*, html {
+*,
+html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: system-ui;
-  background-color: black;
-  position: relative;
+  font-family: "SF Pro Text", "SF Pro Display", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  background-color: #000;
+  color: white;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .header {
-  display: flex;
-  background-color: rgb(18, 18, 18);
   width: 100%;
+  height: 44px;
   position: fixed;
   top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  background: rgba(22, 22, 23, 0.88);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(18px);
 }
 
 .nav {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 14px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  gap: 20px;
-  padding: 10px 0;
+  gap: 22px;
 }
 .nav__link {
-  text-decoration: none;
+  color: rgba(245, 245, 247, 0.9);
+  font-size: 14px;
+  font-weight: 400;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+.nav__link:hover {
+  color: white;
+}
+.nav__link--active {
   color: white;
 }
 
-.section1 {
-  width: 100%;
+.header__logo {
+  width: 14px;
+  height: 44px;
   display: grid;
   place-items: center;
+  opacity: 0.88;
+  transition: opacity 0.2s ease;
+}
+.header__logo img {
+  display: block;
+}
+.header__logo:hover {
+  opacity: 1;
+}
+
+.section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.section1 {
+  padding-top: 74px;
+  padding-bottom: 86px;
+}
+.section1 > img {
+  width: 74vw;
+  max-width: 740px;
+  height: auto;
+  display: block;
+  margin-top: 8px;
+  animation: anim 3s ease-in-out infinite;
 }
 .section1 h1 {
+  margin-top: 20px;
   color: white;
-  font-size: 26px;
-  width: 70%;
-  text-align: center;
+  max-width: 940px;
+  font-size: clamp(28px, 3vw, 35px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.btn {
+  padding: 11px 28px;
+  background-color: transparent;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  line-height: 1.2;
+}
+
+.btn--outlineW {
+  margin-top: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.95);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+.btn--outlineW:hover {
+  background-color: white;
+  color: rgb(18, 18, 18);
+}
+
+@keyframes anim2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.section2 {
+  width: 100%;
+  min-height: 1070px;
+  position: relative;
+  padding-top: 22px;
+  padding-bottom: 72px;
+  margin-top: 4px;
+  background-color: #000;
+  background-image: url("./Picture%20%E2%86%92%20iphone_16_pro__dbqs3s14emky_large.jpg.png");
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+}
+.section2 .iphone--text {
+  margin-top: 6px;
+  display: grid;
+  line-height: 1px;
+  line-height: 1;
+  position: absolute;
+  top: 70px;
+}
+.section2 .iphone--text h2 {
+  color: white;
+  font-size: clamp(42px, 6vw, 82px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: -100px;
+}
+.section2 .iphone--text img {
+  height: auto;
+  display: block;
+  animation: anim2 3s ease-in-out infinite;
+}
+.section2 > h2 {
+  margin-top: 800px;
+  color: white;
+  max-width: 980px;
+  font-size: clamp(20px, 2.3vw, 33px);
+  font-weight: 600;
+  line-height: 1.24;
+}
+.section2 > p {
+  margin-top: 26px;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 700px;
+  font-size: 20px;
+  line-height: 1.35;
+}
+.section2 .btns {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.section2 .btns .btn--outlineW {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 48px;
+  }
+  .nav {
+    max-width: none;
+    justify-content: space-between;
+    gap: 0;
+    padding: 0 16px;
+  }
+  .nav__link {
+    display: none;
+    font-size: 11px;
+  }
+  .header__logo {
+    height: 48px;
+  }
+  .section1 {
+    padding-top: 72px;
+    padding-bottom: 64px;
+  }
+  .section1 > img {
+    width: 100%;
+  }
+  .section1 h1 {
+    max-width: 760px;
+    font-size: clamp(26px, 4.8vw, 45px);
+    line-height: 1.16;
+  }
+  .btn {
+    padding: 9px 22px;
+    font-size: 15px;
+  }
+  .section2 {
+    min-height: 920px;
+    padding-top: 10px;
+    padding-bottom: 56px;
+    background-image: url("./Picture%20%E2%86%92%20iphone_16_pro__dbqs3s14emky_small.jpg.png");
+    background-size: 103vw auto;
+    background-position: center 175px;
+  }
+  .section2 .iphone--text h2 {
+    font-size: clamp(36px, 10vw, 54px);
+  }
+  .section2 .iphone--text img {
+    width: 92vw;
+    max-width: 520px;
+  }
+  .section2 > h2 {
+    margin-top: auto;
+    max-width: 90%;
+    font-size: clamp(18px, 3.2vw, 27px);
+  }
+  .section2 > p {
+    margin-top: 20px;
+    max-width: 88%;
+    font-size: 16px;
+    line-height: 1.45;
+  }
+  .section2 .btns {
+    margin-top: 22px;
+    gap: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
