@@ -1,0 +1,45 @@
+@use 'varibles' as v;
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin flexCenter($gap: 10px, $justify: center) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+    gap: $gap;
+}
+
+.header {
+    padding: 30px 50px;
+    @include flexCenter(15px, space-between);
+    background-color: black;
+}
+
+.nav {
+    @include flexCenter(40px);
+
+    &__link {
+        text-decoration: none;
+        color: #fff;
+        &:hover{
+            text-decoration: underline;
+            opacity: .7;
+        }
+        &:active{
+            font-weight: bold;
+            color: gray;
+        }
+
+    }
+}
+.btn{
+    padding: v.$padding;
+    border-radius: v.$radius;
+}
+.btn__primary{
+    background-color: v.$primary;
+}

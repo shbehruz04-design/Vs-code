@@ -19,6 +19,24 @@
         "command": "python",
         "args": ["-m", "http.server", "8080", "--bind", "0.0.0.0"]
       }
+    },
+    {
+      "label": "Sass: Watch .sass",
+      "type": "shell",
+      "command": "sass",
+      "args": ["--watch", ".sass:.sass"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "isBackground": true,
+      "problemMatcher": [],
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "presentation": {
+        "reveal": "never",
+        "panel": "dedicated"
+      }
     }
   ]
 }

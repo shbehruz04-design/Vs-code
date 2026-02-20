@@ -1,0 +1,45 @@
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 30px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  background-color: black;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.nav__link {
+  text-decoration: none;
+  color: #fff;
+}
+.nav__link:hover {
+  text-decoration: underline;
+  opacity: 0.7;
+}
+.nav__link:active {
+  font-weight: bold;
+  color: gray;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 18px;
+}
+
+.btn__primary {
+  background-color: red;
+}
+
+/*# sourceMappingURL=style.css.map */
